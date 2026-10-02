@@ -1,1738 +1,1957 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IRFAN ANSARI | Document Control Manager</title>
-
-<meta name="description"
-content="Professional portfolio of Irfan Ansari - Document Control Manager, Operations & Industrial Development at ASAS (MODON).">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-:root{
-    --bg:#050a0f;
-    --bg2:#0a141d;
-    --card:#0d1a24;
-    --gold:#d6ad62;
-    --gold2:#f1d38d;
-    --blue:#91d1e2;
-    --white:#f5f7f8;
-    --text:#d6e0e5;
-    --muted:#8fa2ad;
-    --border:rgba(255,255,255,.10);
-}
-
-body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:
-    radial-gradient(circle at 80% 10%,rgba(127,184,200,.13),transparent 28%),
-    radial-gradient(circle at 10% 40%,rgba(214,173,98,.08),transparent 28%),
-    var(--bg);
-    color:var(--white);
-    line-height:1.65;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:92%;
-    max-width:1180px;
-    margin:auto;
-}
-
-/* NAV */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:1000;
-    height:72px;
-    background:rgba(5,10,15,.82);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--border);
-}
-
-.nav{
-    height:72px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:4px;
-    color:var(--gold);
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    color:var(--muted);
-    font-size:13px;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:white;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    padding-top:100px;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:70px;
-    align-items:center;
-}
-
-.eyebrow{
-    color:var(--gold);
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:4px;
-    text-transform:uppercase;
-}
-
-h1{
-    font-size:clamp(55px,8vw,115px);
-    line-height:.84;
-    letter-spacing:-6px;
-    margin:22px 0;
-}
-
-.hero-title{
-    font-size:clamp(20px,2.5vw,31px);
-    line-height:1.3;
-    color:#dce7eb;
-}
-
-.hero-company{
-    margin-top:12px;
-    color:var(--gold);
-    font-size:17px;
-    font-weight:bold;
-}
-
-.hero-text{
-    margin-top:22px;
-    max-width:700px;
-    color:var(--muted);
-    font-size:16px;
-}
-
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 21px;
-    border:1px solid var(--border);
-    border-radius:50px;
-    background:rgba(255,255,255,.04);
-    font-size:13px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    border-color:var(--gold);
-}
-
-.btn-primary{
-    background:var(--gold);
-    color:#111;
-    border-color:var(--gold);
-}
-
-/* PHOTO */
-
-.photo-area{
-    position:relative;
-    width:100%;
-    max-width:430px;
-    margin:auto;
-}
-
-.photo-area::before{
-    content:"";
-    position:absolute;
-    top:18px;
-    right:-18px;
-    bottom:-18px;
-    left:18px;
-    border:1px solid rgba(214,173,98,.35);
-    border-radius:30px;
-}
-
-.profile-photo{
-    position:relative;
-    z-index:2;
-    display:block;
-
-    width:100%;
-    aspect-ratio:4/5;
-
-    object-fit:cover;
-    object-position:center;
-
-    border-radius:30px;
-    border:1px solid var(--border);
-
-    box-shadow:
-    0 30px 90px rgba(0,0,0,.55);
-}
-
-.photo-label{
-    position:absolute;
-    z-index:5;
-    left:-18px;
-    bottom:20px;
-
-    padding:14px 18px;
-
-    background:rgba(5,10,15,.92);
-    backdrop-filter:blur(15px);
-
-    border:1px solid var(--border);
-    border-radius:15px;
-}
-
-.photo-label strong{
-    display:block;
-}
-
-.photo-label span{
-    display:block;
-    color:var(--muted);
-    font-size:11px;
-    margin-top:2px;
-}
-
-/* SECTIONS */
-
-section{
-    padding:100px 0;
-    border-top:1px solid var(--border);
-}
-
-.section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    gap:40px;
-    margin-bottom:45px;
-}
-
-.section-number{
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:4px;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-h2{
-    font-size:clamp(36px,5vw,60px);
-    line-height:1;
-    margin-top:10px;
-}
-
-.section-description{
-    max-width:520px;
-    color:var(--muted);
-}
-
-/* PROFILE */
-
-.profile-grid{
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:20px;
-}
-
-.profile-card{
-    padding:35px;
-    border-radius:24px;
-    border:1px solid var(--border);
-    background:
-    linear-gradient(145deg,#101f2a,#09131b);
-}
-
-.profile-card p{
-    color:var(--text);
-    margin-top:17px;
-}
-
-.tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:25px;
-}
-
-.tag{
-    border:1px solid var(--border);
-    border-radius:30px;
-    padding:7px 11px;
-    color:#cbd8de;
-    font-size:12px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.card{
-    padding:27px;
-    border-radius:22px;
-    border:1px solid var(--border);
-    background:
-    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
-}
-
-.stat{
-    color:var(--gold);
-    font-size:34px;
-    font-weight:900;
-}
-
-.card h3{
-    margin-top:5px;
-    font-size:18px;
-}
-
-.card p{
-    color:var(--muted);
-    font-size:14px;
-}
-
-/* TIMELINE */
-
-.timeline{
-    margin-left:10px;
-    padding-left:35px;
-    border-left:1px solid rgba(214,173,98,.35);
-}
-
-.timeline-item{
-    position:relative;
-    margin-bottom:42px;
-}
-
-.timeline-item::before{
-    content:"";
-    position:absolute;
-    width:12px;
-    height:12px;
-    left:-42px;
-    top:7px;
-    border-radius:50%;
-    background:var(--gold);
-    box-shadow:0 0 0 7px rgba(214,173,98,.08);
-}
-
-.date{
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:2px;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.timeline-item h3{
-    margin-top:6px;
-    font-size:21px;
-}
-
-.company{
-    color:var(--blue);
-    font-weight:bold;
-}
-
-.timeline-item p{
-    color:var(--muted);
-    margin-top:8px;
-    max-width:900px;
-}
-
-/* EXPERTISE */
-
-.expertise-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:17px;
-}
-
-.expertise{
-    padding:28px;
-    border:1px solid var(--border);
-    border-radius:22px;
-    background:
-    linear-gradient(135deg,
-    rgba(127,184,200,.07),
-    rgba(214,173,98,.035));
-
-    transition:.3s;
-}
-
-.expertise:hover{
-    transform:translateY(-5px);
-    border-color:rgba(214,173,98,.4);
-}
-
-.expertise-number{
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:3px;
-}
-
-.expertise h3{
-    margin:12px 0 7px;
-    font-size:20px;
-}
-
-.expertise p{
-    color:var(--muted);
-    font-size:14px;
-}
-
-/* FLOW */
-
-.flow{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:10px;
-}
-
-.flow-item{
-    text-align:center;
-    padding:22px 10px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:16px;
-}
-
-.flow-item b{
-    color:var(--gold);
-    font-size:11px;
-}
-
-.flow-item span{
-    display:block;
-    margin-top:7px;
-    font-size:13px;
-    font-weight:bold;
-}
-
-/* PROJECTS */
-
-.projects{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-}
-
-.project{
-    min-height:220px;
-    padding:30px;
-    border-radius:24px;
-    border:1px solid var(--border);
-    background:
-    linear-gradient(135deg,
-    rgba(127,184,200,.07),
-    rgba(214,173,98,.04));
-}
-
-.project-number{
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:3px;
-}
-
-.project h3{
-    margin:16px 0 8px;
-    font-size:22px;
-}
-
-.project p{
-    color:var(--muted);
-    font-size:14px;
-}
-
-/* CREDENTIALS */
-
-.credentials{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:17px;
-}
-
-/* CV */
-
-.cv-box{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:30px;
-
-    padding:35px;
-
-    border-radius:25px;
-    border:1px solid var(--border);
-
-    background:
-    linear-gradient(135deg,
-    rgba(214,173,98,.08),
-    rgba(127,184,200,.05));
-}
-
-.cv-box p{
-    color:var(--muted);
-    max-width:650px;
-}
-
-/* CONTACT */
-
-.contact{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:17px;
-}
-
-.contact-card{
-    padding:27px;
-    border-radius:20px;
-    border:1px solid var(--border);
-    background:var(--card);
-}
-
-.contact-label{
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-}
-
-.contact-card a{
-    display:block;
-    margin-top:8px;
-    color:white;
-    word-break:break-word;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:30px;
-    color:var(--muted);
-    font-size:12px;
-    border-top:1px solid var(--border);
-}
-
-/* ANIMATION */
-
-.reveal{
-    opacity:0;
-    transform:translateY(25px);
-    transition:
-    opacity .8s ease,
-    transform .8s ease;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero-grid{
-        grid-template-columns:1fr;
-    }
-
-    .photo-area{
-        max-width:370px;
-    }
-
-    .profile-grid{
-        grid-template-columns:1fr;
-    }
-
-    .expertise-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .credentials{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .flow{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px){
-
-    h1{
-        font-size:60px;
-    }
-
-    section{
-        padding:75px 0;
-    }
-
-    .section-head{
-        display:block;
-    }
-
-    .section-description{
-        margin-top:20px;
-    }
-
-    .stats,
-    .expertise-grid,
-    .projects,
-    .credentials,
-    .contact{
-        grid-template-columns:1fr;
-    }
-
-    .cv-box{
-        display:block;
-    }
-
-    .cv-box .btn{
-        margin-top:20px;
-    }
-
-    .photo-label{
-        left:8px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Professional portfolio of Irfan Ansari - Document Control Manager, Operations & Industrial Development">
+
+    <title>IRFAN ANSARI | Document Control Manager</title>
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(210, 176, 92, 0.08),
+                    transparent 30%
+                ),
+                #07090d;
+
+            color: #f4f4f4;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --gold: #d8b86a;
+            --gold-light: #f0d99a;
+            --white: #ffffff;
+            --muted: #9da4b0;
+            --dark: #07090d;
+            --card: rgba(255,255,255,0.035);
+            --border: rgba(255,255,255,0.10);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(7, 9, 13, 0.82);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .nav {
+            min-height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b9bec7;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 110px;
+            padding-bottom: 70px;
+
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            top: 5%;
+            right: -180px;
+
+            background: rgba(216,184,106,0.08);
+            filter: blur(120px);
+            border-radius: 50%;
+
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(58px, 8vw, 110px);
+            line-height: 0.86;
+            letter-spacing: -5px;
+            font-weight: 900;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero-role {
+            font-size: clamp(20px, 2vw, 27px);
+            line-height: 1.25;
+            color: #e8ebef;
+            max-width: 680px;
+            margin-bottom: 18px;
+        }
+
+        .hero-company {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            color: var(--muted);
+            font-size: 15px;
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+            padding: 0 23px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(216,184,106,0.20);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(216,184,106,0.35);
+            color: #ddd;
+            background: rgba(255,255,255,0.025);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        /* =========================================================
+           HERO PHOTO
+        ========================================================= */
+
+        .hero-photo {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            margin: auto;
+
+            min-height: 560px;
+
+            border-radius: 34px;
+
+            border: 1px solid rgba(216,184,106,0.25);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(216,184,106,0.10),
+                    rgba(255,255,255,0.02)
+                );
+
+            padding: 12px;
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.40),
+                inset 0 0 50px rgba(216,184,106,0.03);
+
+            overflow: hidden;
+        }
+
+        .hero-photo::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    transparent 30%,
+                    rgba(255,255,255,0.08),
+                    transparent 70%
+                );
+
+            transform: translateX(-100%);
+            animation: shine 7s infinite;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        @keyframes shine {
+            0%, 65% {
+                transform: translateX(-100%);
+            }
+
+            85%, 100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .profile-photo {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            min-height: 534px;
+
+            object-fit: cover;
+            object-position: center;
+
+            border-radius: 25px;
+
+            position: relative;
+            z-index: 1;
+
+            background: #11151c;
+        }
+
+        /* If image cannot load */
+
+        .photo-fallback {
+            position: absolute;
+            inset: 12px;
+
+            border-radius: 25px;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(216,184,106,0.12),
+                    transparent 60%
+                ),
+                #10141b;
+
+            color: var(--gold);
+
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 5px;
+
+            z-index: 3;
+        }
+
+        .photo-tag {
+            position: absolute;
+            left: 28px;
+            bottom: 30px;
+
+            z-index: 5;
+
+            padding: 13px 17px;
+
+            border-radius: 12px;
+
+            background: rgba(5,7,10,0.82);
+            border: 1px solid rgba(216,184,106,0.25);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .photo-tag strong {
+            display: block;
+            color: white;
+            font-size: 13px;
+        }
+
+        .photo-tag span {
+            color: var(--gold);
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            max-width: 650px;
+            margin-top: 18px;
+        }
+
+        /* =========================================================
+           PROFILE
+        ========================================================= */
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .glass-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+
+            transition: 0.35s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(216,184,106,0.25);
+        }
+
+        .glass-card h3 {
+            color: var(--gold);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .glass-card p {
+            color: #b7bdc6;
+            font-size: 15px;
+        }
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .stat {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: rgba(255,255,255,0.025);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 30px;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           JOURNEY
+        ========================================================= */
+
+        .timeline {
+            position: relative;
+            max-width: 950px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+
+            width: 1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--gold),
+                    rgba(216,184,106,0.05)
+                );
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 45px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+            left: 2px;
+            top: 8px;
+
+            width: 13px;
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+
+            box-shadow:
+                0 0 0 5px rgba(216,184,106,0.08);
+        }
+
+        .timeline-date {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            color: #c7ccd4;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            max-width: 750px;
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           EXPERTISE
+        ========================================================= */
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .expertise-card {
+            min-height: 190px;
+
+            padding: 28px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.045),
+                    rgba(255,255,255,0.015)
+                );
+
+            border: 1px solid var(--border);
+
+            transition: 0.35s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(216,184,106,0.35);
+        }
+
+        .expertise-icon {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .expertise-card h3 {
+            font-size: 17px;
+            margin-bottom: 9px;
+        }
+
+        .expertise-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           DOCUMENT FLOW
+        ========================================================= */
+
+        .flow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .flow-box {
+            padding: 22px 15px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.025);
+
+            position: relative;
+        }
+
+        .flow-box strong {
+            display: block;
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .flow-box span {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            padding: 30px;
+
+            border-radius: 25px;
+
+            background: var(--card);
+            border: 1px solid var(--border);
+
+            transition: 0.35s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: rgba(216,184,106,0.30);
+        }
+
+        .project-number {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           CREDENTIALS
+        ========================================================= */
+
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .credential {
+            padding: 28px;
+
+            border: 1px solid var(--border);
+            border-radius: 22px;
+
+            background: rgba(255,255,255,0.025);
+        }
+
+        .credential h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .credential p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           CV
+        ========================================================= */
+
+        .cv-box {
+            text-align: center;
+
+            padding: 65px 30px;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(216,184,106,0.09),
+                    transparent 65%
+                );
+
+            border: 1px solid rgba(216,184,106,0.20);
+        }
+
+        .cv-box h2 {
+            font-size: clamp(35px, 5vw, 58px);
+            margin-bottom: 14px;
+        }
+
+        .cv-box p {
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .contact-card {
+            padding: 28px;
+
+            border: 1px solid var(--border);
+            border-radius: 22px;
+
+            background: rgba(255,255,255,0.025);
+        }
+
+        .contact-card span {
+            display: block;
+            color: var(--gold);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card a,
+        .contact-card p {
+            color: #e8e9ec;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 35px 0;
+
+            border-top: 1px solid var(--border);
+
+            text-align: center;
+
+            color: #737a85;
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        /* =========================================================
+           REVEAL ANIMATION
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+
+            animation: reveal 1s ease forwards;
+        }
+
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-photo {
+                max-width: 520px;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .credentials {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            header {
+                position: absolute;
+            }
+
+            .nav {
+                min-height: 65px;
+            }
+
+            .logo {
+                font-size: 17px;
+                letter-spacing: 3px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 57px;
+                letter-spacing: -3px;
+            }
+
+            .hero-role {
+                font-size: 20px;
+            }
+
+            .hero-photo {
+                min-height: 460px;
+            }
+
+            .profile-photo {
+                min-height: 434px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credentials {
+                grid-template-columns: 1fr;
+            }
+
+            .flow {
+                grid-template-columns: 1fr;
+            }
+
+            .glass-card,
+            .project,
+            .credential,
+            .contact-card {
+                padding: 24px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-<nav>
-<div class="container nav">
+<header>
 
-<a href="#home" class="logo">IA.</a>
+    <div class="container nav">
 
-<div class="nav-links">
-<a href="#profile">Profile</a>
-<a href="#journey">Journey</a>
-<a href="#expertise">Expertise</a>
-<a href="#projects">Projects</a>
-<a href="#credentials">Credentials</a>
-<a href="#contact">Contact</a>
-</div>
+        <a href="#home" class="logo">
+            IA.
+        </a>
 
-</div>
-</nav>
+        <nav class="nav-links">
 
+            <a href="#profile">Profile</a>
+            <a href="#journey">Journey</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#credentials">Credentials</a>
+            <a href="#contact">Contact</a>
 
-<!-- HERO -->
+        </nav>
 
-<header class="hero" id="home">
-
-<div class="container hero-grid">
-
-<div class="reveal">
-
-<div class="eyebrow">
-DOCUMENT CONTROL · OPERATIONS · INDUSTRIAL DEVELOPMENT
-</div>
-
-<h1>
-IRFAN<br>
-ANSARI
-</h1>
-
-<div class="hero-title">
-Document Control Manager – Operations & Industrial Development
-</div>
-
-<div class="hero-company">
-ASAS (MODON) · May 2026 – Present
-</div>
-
-<p class="hero-text">
-15+ years of international experience across Saudi Arabia and India,
-with professional expertise in document control, Aconex, EDMS,
-project documentation, construction and engineering environments.
-</p>
-
-<div class="buttons">
-
-<a
-href="Irfan-Ansari-CV.pdf"
-class="btn btn-primary"
-target="_blank">
-VIEW / DOWNLOAD CV
-</a>
-
-<a
-href="#journey"
-class="btn">
-EXPLORE CAREER
-</a>
-
-<a
-href="mailto:Irfan.ansari6600@gmail.com"
-class="btn">
-CONTACT
-</a>
-
-</div>
-
-</div>
-
-
-<!-- IMPORTANT: PHOTO FILE NAME IS EXACTLY irfan-profile.jpg -->
-
-<div class="photo-area reveal">
-
-<img
-src="./irfan-profile.jpg"
-alt="Irfan Ansari"
-class="profile-photo"
-loading="eager">
-
-<div class="photo-label">
-<strong>ASAS · MODON</strong>
-<span>Document Control Manager</span>
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </header>
 
 
-<!-- PROFILE -->
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main id="home">
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div class="reveal">
+
+            <div class="eyebrow">
+                Document Control • Operations • Industrial Development
+            </div>
+
+            <h1>
+                <span>IRFAN</span>
+                <span>ANSARI</span>
+            </h1>
+
+            <div class="hero-role">
+                Document Control Manager – Operations & Industrial Development
+            </div>
+
+            <div class="hero-company">
+                ASAS (MODON) · May 2026 – Present
+            </div>
+
+            <p class="hero-description">
+                15+ years of international experience across Saudi Arabia
+                and India, with professional expertise in document control,
+                Aconex, EDMS, project documentation, construction and
+                engineering environments.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="Irfan-Ansari-CV.pdf"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener">
+                    View / Download CV
+                </a>
+
+                <a
+                    href="#journey"
+                    class="btn btn-outline">
+                    Explore Career
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn btn-outline">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PHOTO
+        ====================================================== -->
+
+        <div class="hero-photo reveal">
+
+            <!-- EXACT CURRENT GITHUB FILE NAME -->
+            <img
+                src="irfan-profile.png"
+                alt="Irfan Ansari"
+                class="profile-photo"
+                id="profileImage">
+
+            <!-- Fallback if image cannot load -->
+            <div
+                class="photo-fallback"
+                id="photoFallback">
+
+                IRFAN<br>
+                ANSARI
+
+            </div>
+
+
+            <div class="photo-tag">
+
+                <strong>ASAS · MODON</strong>
+
+                <span>
+                    Document Control Manager
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROFILE
+========================================================= -->
 
 <section id="profile">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                01 — PROFILE
+            </div>
 
-<div class="section-number">
-01 / Executive Profile
-</div>
+            <h2>
+                Precision behind<br>
+                every document.
+            </h2>
 
-<h2>
-Structured information.<br>
-Controlled delivery.
-</h2>
+            <p>
+                A structured approach to document governance,
+                project information, records management and
+                operational coordination.
+            </p>
 
-</div>
-
-<p class="section-description">
-A professional profile focused on document control,
-operations, project information management and
-industrial development environments.
-</p>
-
-</div>
+        </div>
 
 
-<div class="profile-grid">
+        <div class="profile-grid">
 
-<div class="profile-card reveal">
+            <div class="glass-card">
 
-<div class="section-number">
-Professional Summary
-</div>
+                <h3>
+                    Professional Profile
+                </h3>
 
-<p>
-Irfan Ansari is a highly organized and detail-oriented
-document-control professional with over 15 years of
-experience in construction and engineering projects
-across Saudi Arabia and India.
-</p>
+                <p>
+                    Experienced document control professional with
+                    extensive exposure to construction, engineering,
+                    project documentation and industrial environments.
+                    Skilled in managing controlled information,
+                    document workflows, records and electronic
+                    document management systems.
+                </p>
 
-<p>
-His documented expertise includes Aconex, document
-workflows, workflow-template creation, version control,
-ISO standards, project close-out documentation and
-coordination with consultants, contractors and
-cross-functional project teams.
-</p>
-
-<p>
-He currently serves as
-<strong>
-Document Control Manager – Operations & Industrial Development
-</strong>
-at <strong>ASAS (MODON)</strong>, from May 2026 to present.
-</p>
-
-<div class="tags">
-
-<span class="tag">Aconex</span>
-<span class="tag">Document Control</span>
-<span class="tag">EDMS</span>
-<span class="tag">Workflow Management</span>
-<span class="tag">ISO Compliance</span>
-<span class="tag">Project Close-Out</span>
-<span class="tag">KPI Reporting</span>
-<span class="tag">Stakeholder Coordination</span>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="stats">
+            <div class="glass-card">
 
-<div class="card reveal">
-<div class="stat">15+</div>
-<h3>Years</h3>
-<p>Overseas experience.</p>
-</div>
+                <h3>
+                    Current Position
+                </h3>
 
-<div class="card reveal">
-<div class="stat">KSA</div>
-<h3>Experience</h3>
-<p>Saudi project experience.</p>
-</div>
+                <p>
+                    Document Control Manager – Operations &
+                    Industrial Development at ASAS (MODON),
+                    responsible for maintaining structured
+                    documentation and supporting controlled
+                    information flow across operational activities.
+                </p>
 
-<div class="card reveal">
-<div class="stat">Aconex</div>
-<h3>Specialization</h3>
-<p>Document-control expertise.</p>
-</div>
+            </div>
 
-<div class="card reveal">
-<div class="stat">ISO</div>
-<h3>Compliance</h3>
-<p>ISO standards exposure.</p>
-</div>
+        </div>
 
-</div>
 
-</div>
+        <div class="stats">
 
-</div>
+            <div class="stat">
+                <strong>15+</strong>
+                <span>Years Experience</span>
+            </div>
+
+            <div class="stat">
+                <strong>2</strong>
+                <span>Countries</span>
+            </div>
+
+            <div class="stat">
+                <strong>EDMS</strong>
+                <span>Document Systems</span>
+            </div>
+
+            <div class="stat">
+                <strong>01</strong>
+                <span>Professional Focus</span>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- CAREER JOURNEY -->
+<!-- =========================================================
+     CAREER JOURNEY
+========================================================= -->
 
 <section id="journey">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                02 — JOURNEY
+            </div>
 
-<div class="section-number">
-02 / Professional Journey
-</div>
+            <h2>
+                Career Journey
+            </h2>
 
-<h2>Career timeline.</h2>
+            <p>
+                Professional progression through document control,
+                project documentation and construction environments.
+            </p>
 
-</div>
+        </div>
 
-<p class="section-description">
-From document control and project records to
-the current management role in operations and
-industrial development.
-</p>
 
-</div>
+        <div class="timeline">
 
 
-<div class="timeline">
+            <div class="timeline-item">
 
+                <div class="timeline-date">
+                    MAY 2026 — PRESENT
+                </div>
 
-<!-- CURRENT -->
+                <h3>
+                    Document Control Manager
+                </h3>
 
-<div class="timeline-item reveal">
+                <div class="timeline-company">
+                    ASAS (MODON) · Operations & Industrial Development
+                </div>
 
-<div class="date">
-May 2026 – Present
-</div>
+                <p>
+                    Managing document control activities,
+                    information flow and structured documentation
+                    within operations and industrial development.
+                </p>
 
-<h3>
-Document Control Manager – Operations & Industrial Development
-</h3>
+            </div>
 
-<div class="company">
-ASAS (MODON)
-</div>
 
-<p>
-Current management position supplied for this portfolio.
-Official responsibilities and achievements can be added
-when provided.
-</p>
+            <div class="timeline-item">
 
-</div>
+                <div class="timeline-date">
+                    PREVIOUS EXPERIENCE
+                </div>
 
+                <h3>
+                    Document Control & Project Documentation
+                </h3>
 
-<!-- MORGANTI -->
+                <div class="timeline-company">
+                    Saudi Arabia & India
+                </div>
 
-<div class="timeline-item reveal">
+                <p>
+                    Extensive experience supporting construction,
+                    engineering and project environments through
+                    document control, EDMS and project information
+                    management.
+                </p>
 
-<div class="date">
-Feb 2026 – Apr 2026
-</div>
+            </div>
 
-<h3>
-Senior Document Controller – Aconex Expert
-</h3>
 
-<div class="company">
-Morganti GCC KSA · PMC
-</div>
+            <div class="timeline-item">
 
-<p>
-Project: Aqua Raffles, Jeddah. Managed project documentation
-and correspondence through Aconex, monitored workflows,
-coordinated with consultants, contractors and client
-representatives, maintained registers and supported
-close-out and reporting.
-</p>
+                <div class="timeline-date">
+                    PROFESSIONAL DEVELOPMENT
+                </div>
 
-</div>
+                <h3>
+                    Construction & Engineering Documentation
+                </h3>
 
+                <div class="timeline-company">
+                    Project-Based Environments
+                </div>
 
-<!-- CCS -->
+                <p>
+                    Developed strong expertise in document
+                    registration, transmittals, revision control,
+                    records management and controlled information
+                    distribution.
+                </p>
 
-<div class="timeline-item reveal">
+            </div>
 
-<div class="date">
-Aug 2024 – Feb 2026
-</div>
 
-<h3>
-Senior Document Controller – Aconex Expert
-</h3>
+        </div>
 
-<div class="company">
-Consolidated Contracting Solutions Ltd. · EPC
-</div>
-
-<p>
-Projects included Madrasta Addera Art School Phase-1,
-Al Ula, and Asset Condition Assessment & Investment
-Planning, Jeddah. Managed Aconex administration,
-workflows, MDRs, IFC/IFI/as-built documentation,
-correspondence, audits, training and handover documentation.
-</p>
-
-</div>
-
-
-<!-- SMC -->
-
-<div class="timeline-item reveal">
-
-<div class="date">
-Oct 2018 – Apr 2024
-</div>
-
-<h3>
-Document Controller
-</h3>
-
-<div class="company">
-SMC Projects · Kalaburagi, India
-</div>
-
-<p>
-Government development projects including Karnataka
-Residential Educational Institutions Society works,
-Chennamma Residential School Complex, Hyderabad
-Metropolitan Water Supply & Sewerage Board and
-Karnataka Housing Board projects.
-</p>
-
-</div>
-
-
-<!-- YASSER -->
-
-<div class="timeline-item reveal">
-
-<div class="date">
-May 2016 – Apr 2018
-</div>
-
-<h3>
-Document Controller
-</h3>
-
-<div class="company">
-Yasser Yaghmour Co. · Jeddah, Saudi Arabia
-</div>
-
-<p>
-Projects at King Abdullah Economic City including
-Marooj, Talha Garden and Namariq KAEC Residency.
-Controlled drawings, RFIs, material submittals,
-method statements, as-builts and EDMS records.
-</p>
-
-</div>
-
-
-<!-- RASHED -->
-
-<div class="timeline-item reveal">
-
-<div class="date">
-May 2013 – Apr 2016
-</div>
-
-<h3>
-Document Controller
-</h3>
-
-<div class="company">
-Abdulaziz & Faisal Sons of Abdullah Saad Al Rashed Co. Ltd.
-</div>
-
-<p>
-MOH Medical University project in Tabuk.
-Managed project documents, approvals, logs,
-registers, reports, confidential records and audit support.
-</p>
-
-</div>
-
-
-<!-- ESSA -->
-
-<div class="timeline-item reveal">
-
-<div class="date">
-May 2011 – Apr 2013
-</div>
-
-<h3>
-Document Controller
-</h3>
-
-<div class="company">
-Essa Binladen · Al Haram Extension Project, Makkah
-</div>
-
-<p>
-Managed documentation for the Al Haram Extension project,
-including drawings, submittals, pending approvals,
-distribution, quality checks, archiving and audit documentation.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- EXPERTISE -->
+<!-- =========================================================
+     EXPERTISE
+========================================================= -->
 
 <section id="expertise">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                03 — EXPERTISE
+            </div>
 
-<div class="section-number">
-03 / Core Expertise
-</div>
+            <h2>
+                Core Expertise
+            </h2>
 
-<h2>
-Professional toolkit.
-</h2>
+            <p>
+                Key professional capabilities built through years
+                of project and operational experience.
+            </p>
 
-</div>
-
-<p class="section-description">
-Core capabilities documented in the supplied CV.
-</p>
-
-</div>
+        </div>
 
 
-<div class="expertise-grid">
+        <div class="expertise-grid">
 
 
-<div class="expertise reveal">
-<div class="expertise-number">01</div>
-<h3>Aconex Administration</h3>
-<p>
-User setup, permissions, workflow templates,
-mail distribution groups and document registers.
-</p>
-</div>
+            <div class="expertise-card">
+
+                <div class="expertise-icon">
+                    01
+                </div>
+
+                <h3>
+                    Document Control
+                </h3>
+
+                <p>
+                    Controlled documentation, revision management,
+                    distribution, registration and document tracking.
+                </p>
+
+            </div>
 
 
-<div class="expertise reveal">
-<div class="expertise-number">02</div>
-<h3>Document Control</h3>
-<p>
-Document registration, distribution, revision control,
-metadata, transmittals and record management.
-</p>
-</div>
+            <div class="expertise-card">
+
+                <div class="expertise-icon">
+                    02
+                </div>
+
+                <h3>
+                    Aconex
+                </h3>
+
+                <p>
+                    Electronic document workflows, transmittals,
+                    correspondence and controlled project information.
+                </p>
+
+            </div>
 
 
-<div class="expertise reveal">
-<div class="expertise-number">03</div>
-<h3>Project Documentation</h3>
-<p>
-Drawings, submittals, RFIs, method statements,
-correspondence, IFC/IFI and as-built records.
-</p>
-</div>
+            <div class="expertise-card">
+
+                <div class="expertise-icon">
+                    03
+                </div>
+
+                <h3>
+                    EDMS
+                </h3>
+
+                <p>
+                    Electronic document management systems and
+                    structured information repositories.
+                </p>
+
+            </div>
 
 
-<div class="expertise reveal">
-<div class="expertise-number">04</div>
-<h3>Workflow & Version Control</h3>
-<p>
-Workflow monitoring, approvals, traceability,
-revision status and controlled filing structures.
-</p>
-</div>
+            <div class="expertise-card">
+
+                <div class="expertise-icon">
+                    04
+                </div>
+
+                <h3>
+                    Project Documentation
+                </h3>
+
+                <p>
+                    Managing project records and documentation
+                    throughout project information lifecycles.
+                </p>
+
+            </div>
 
 
-<div class="expertise reveal">
-<div class="expertise-number">05</div>
-<h3>Compliance & Audits</h3>
-<p>
-ISO standards, audit-ready records and
-client/consultant documentation requirements.
-</p>
-</div>
+            <div class="expertise-card">
+
+                <div class="expertise-icon">
+                    05
+                </div>
+
+                <h3>
+                    Records Management
+                </h3>
+
+                <p>
+                    Structured filing, retrieval, archiving and
+                    controlled retention of project information.
+                </p>
+
+            </div>
 
 
-<div class="expertise reveal">
-<div class="expertise-number">06</div>
-<h3>Reporting & KPI Tracking</h3>
-<p>
-Document status reports, tracking logs,
-dashboard updates and master document registers.
-</p>
-</div>
+            <div class="expertise-card">
+
+                <div class="expertise-icon">
+                    06
+                </div>
+
+                <h3>
+                    Operations Support
+                </h3>
+
+                <p>
+                    Supporting operational and industrial development
+                    activities through reliable information control.
+                </p>
+
+            </div>
 
 
-<div class="expertise reveal">
-<div class="expertise-number">07</div>
-<h3>Stakeholder Coordination</h3>
-<p>
-Coordination with consultants, contractors,
-client representatives, engineers and project teams.
-</p>
-</div>
+        </div>
 
-
-<div class="expertise reveal">
-<div class="expertise-number">08</div>
-<h3>Project Close-Out</h3>
-<p>
-Handover documentation, final submissions,
-as-built records and close-out requirements.
-</p>
-</div>
-
-
-<div class="expertise reveal">
-<div class="expertise-number">09</div>
-<h3>Training & Guidance</h3>
-<p>
-Guidance and training for project staff on
-Aconex usage and document-control procedures.
-</p>
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- DOCUMENT FLOW -->
+<!-- =========================================================
+     DOCUMENT FLOW
+========================================================= -->
 
 <section>
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                04 — DOCUMENT FLOW
+            </div>
 
-<div class="section-number">
-04 / Operating Model
-</div>
+            <h2>
+                Information Flow
+            </h2>
 
-<h2>
-Controlled information flow.
-</h2>
+            <p>
+                A structured document lifecycle ensures that the
+                right information reaches the right people at the
+                right time.
+            </p>
 
-</div>
-
-<p class="section-description">
-A simplified representation of the document-control cycle.
-</p>
-
-</div>
+        </div>
 
 
-<div class="flow reveal">
+        <div class="flow">
 
-<div class="flow-item">
-<b>01</b>
-<span>Receive</span>
-</div>
+            <div class="flow-box">
+                <strong>RECEIVE</strong>
+                <span>Incoming documents</span>
+            </div>
 
-<div class="flow-item">
-<b>02</b>
-<span>Register</span>
-</div>
+            <div class="flow-box">
+                <strong>REGISTER</strong>
+                <span>Document tracking</span>
+            </div>
 
-<div class="flow-item">
-<b>03</b>
-<span>Review</span>
-</div>
+            <div class="flow-box">
+                <strong>REVIEW</strong>
+                <span>Controlled review</span>
+            </div>
 
-<div class="flow-item">
-<b>04</b>
-<span>Workflow</span>
-</div>
+            <div class="flow-box">
+                <strong>DISTRIBUTE</strong>
+                <span>Information flow</span>
+            </div>
 
-<div class="flow-item">
-<b>05</b>
-<span>Track</span>
-</div>
+            <div class="flow-box">
+                <strong>ARCHIVE</strong>
+                <span>Records retention</span>
+            </div>
 
-<div class="flow-item">
-<b>06</b>
-<span>Close-Out</span>
-</div>
+        </div>
 
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- PROJECTS -->
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
 
 <section id="projects">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                05 — PROJECT EXPERIENCE
+            </div>
 
-<div class="section-number">
-05 / Project Experience
-</div>
+            <h2>
+                Project Environment
+            </h2>
 
-<h2>
-Selected projects.
-</h2>
+            <p>
+                Experience supporting documentation requirements
+                across construction, engineering and industrial
+                project environments.
+            </p>
 
-</div>
-
-<p class="section-description">
-Selected project environments documented in the CV.
-</p>
-
-</div>
+        </div>
 
 
-<div class="projects">
+        <div class="projects-grid">
 
 
-<div class="project reveal">
+            <div class="project">
 
-<div class="project-number">
-01 · JEDDAH
-</div>
+                <div class="project-number">
+                    PROJECT 01
+                </div>
 
-<h3>Aqua Raffles</h3>
+                <h3>
+                    Construction Documentation
+                </h3>
 
-<p>
-Client: ERTH · PMC: Morganti GCC KSA.
-Aconex project documentation, workflows,
-correspondence, reporting and close-out support.
-</p>
+                <p>
+                    Controlled project documentation including
+                    drawings, correspondence, transmittals,
+                    submissions and records.
+                </p>
 
-</div>
-
-
-<div class="project reveal">
-
-<div class="project-number">
-02 · AL ULA
-</div>
-
-<h3>Madrasta Addera Art School – Phase 1</h3>
-
-<p>
-Client: RCU · Supervision Consultant: SaudConsult ·
-PMC: Atkin’s Reels. Document-control and
-Aconex administration.
-</p>
-
-</div>
+            </div>
 
 
-<div class="project reveal">
+            <div class="project">
 
-<div class="project-number">
-03 · JEDDAH
-</div>
+                <div class="project-number">
+                    PROJECT 02
+                </div>
 
-<h3>Asset Condition Assessment & Investment Planning</h3>
+                <h3>
+                    Engineering Information
+                </h3>
 
-<p>
-Client: JEDCO · Supervision Consultant: Bureau Veritas.
-Aconex administration, records, workflows,
-reporting and close-out support.
-</p>
+                <p>
+                    Supporting structured information exchange
+                    between project stakeholders and engineering
+                    teams.
+                </p>
 
-</div>
-
-
-<div class="project reveal">
-
-<div class="project-number">
-04 · KAEC
-</div>
-
-<h3>Marooj / Talha Garden / Namariq KAEC Residency</h3>
-
-<p>
-Client: EMAAR. Document control, EDMS,
-technical submissions, consultant coordination
-and secure archiving.
-</p>
-
-</div>
+            </div>
 
 
-<div class="project reveal">
+            <div class="project">
 
-<div class="project-number">
-05 · TABUK
-</div>
+                <div class="project-number">
+                    PROJECT 03
+                </div>
 
-<h3>MOH Medical University</h3>
+                <h3>
+                    EDMS Management
+                </h3>
 
-<p>
-Client: Ministry of Health.
-Consultant: Otaishan Consulting Engineers.
-Document registers, approvals, distribution and audit support.
-</p>
+                <p>
+                    Managing electronic documentation through
+                    controlled digital systems and established
+                    workflows.
+                </p>
 
-</div>
-
-
-<div class="project reveal">
-
-<div class="project-number">
-06 · MAKKAH
-</div>
-
-<h3>Al Haram Extension</h3>
-
-<p>
-Consultant: Dar Al-Handasah.
-Documentation, drawings, submittals, approvals,
-quality checks and controlled archiving.
-</p>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="project">
 
-</div>
+                <div class="project-number">
+                    PROJECT 04
+                </div>
+
+                <h3>
+                    Industrial Development
+                </h3>
+
+                <p>
+                    Current professional focus supporting operations
+                    and industrial development through structured
+                    documentation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- CREDENTIALS -->
+<!-- =========================================================
+     CREDENTIALS
+========================================================= -->
 
 <section id="credentials">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                06 — CREDENTIALS
+            </div>
 
-<div class="section-number">
-06 / Credentials
-</div>
+            <h2>
+                Professional Toolkit
+            </h2>
 
-<h2>
-Education & training.
-</h2>
+            <p>
+                Systems, practices and capabilities supporting
+                effective document control.
+            </p>
 
-</div>
-
-<p class="section-description">
-Education and training information from the supplied CV.
-</p>
-
-</div>
+        </div>
 
 
-<div class="credentials">
+        <div class="credentials">
 
 
-<div class="card reveal">
-<div class="stat">12th</div>
-<h3>Higher Secondary Certificate</h3>
-<p>
-Educational background documented in the CV.
-</p>
-</div>
+            <div class="credential">
+
+                <h3>
+                    Aconex
+                </h3>
+
+                <p>
+                    Project communication and document management
+                    environment.
+                </p>
+
+            </div>
 
 
-<div class="card reveal">
-<div class="stat">Aconex</div>
-<h3>System Training</h3>
-<p>
-Aconex System Training covering user and administration.
-</p>
-</div>
+            <div class="credential">
+
+                <h3>
+                    EDMS
+                </h3>
+
+                <p>
+                    Electronic document management and information
+                    repositories.
+                </p>
+
+            </div>
 
 
-<div class="card reveal">
-<div class="stat">2009</div>
-<h3>MS Word & Excel</h3>
-<p>
-Certificate in MS Word & Excel training.
-</p>
-</div>
+            <div class="credential">
+
+                <h3>
+                    Document Control
+                </h3>
+
+                <p>
+                    Revision, distribution, registration and
+                    controlled documentation.
+                </p>
+
+            </div>
 
 
-<div class="card reveal">
-<div class="stat">2026</div>
-<h3>Aconex Professional</h3>
-<p>
-Oracle Aconex Professional learning-path
-training material included in the supplied CV package.
-</p>
-</div>
+            <div class="credential">
+
+                <h3>
+                    Records Management
+                </h3>
+
+                <p>
+                    Structured records, filing and information
+                    retention.
+                </p>
+
+            </div>
 
 
-</div>
+            <div class="credential">
 
-</div>
+                <h3>
+                    Project Coordination
+                </h3>
+
+                <p>
+                    Supporting project teams with reliable
+                    information flow.
+                </p>
+
+            </div>
+
+
+            <div class="credential">
+
+                <h3>
+                    Operations Support
+                </h3>
+
+                <p>
+                    Documentation support for operational and
+                    industrial development activities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- LANGUAGES & SOFTWARE -->
+<!-- =========================================================
+     CV
+========================================================= -->
 
 <section>
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="cv-box">
 
-<div>
+            <div class="section-number">
+                PROFESSIONAL CV
+            </div>
 
-<div class="section-number">
-07 / Languages & Systems
-</div>
+            <h2>
+                Explore the Complete Profile
+            </h2>
 
-<h2>
-Communication & technology.
-</h2>
+            <p>
+                For detailed professional experience, responsibilities,
+                education and career history, view the complete CV.
+            </p>
 
-</div>
+            <a
+                href="Irfan-Ansari-CV.pdf"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary">
 
-</div>
+                View / Download CV
 
+            </a>
 
-<div class="expertise-grid">
+        </div>
 
-
-<div class="expertise reveal">
-<h3>English</h3>
-<p>Fluent</p>
-</div>
-
-<div class="expertise reveal">
-<h3>Hindi</h3>
-<p>Fluent</p>
-</div>
-
-<div class="expertise reveal">
-<h3>Arabic</h3>
-<p>Fluent</p>
-</div>
-
-<div class="expertise reveal">
-<h3>Microsoft Office</h3>
-<p>Word · Excel · PowerPoint · Outlook</p>
-</div>
-
-<div class="expertise reveal">
-<h3>Adobe Acrobat Professional</h3>
-<p>Document preparation and PDF workflows.</p>
-</div>
-
-<div class="expertise reveal">
-<h3>AutoCAD</h3>
-<p>Basic drawing review & mark-ups.</p>
-</div>
-
-<div class="expertise reveal">
-<h3>Aconex</h3>
-<p>Document control, workflows, user administration and EDMS.</p>
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- CV -->
-
-<section>
-
-<div class="container">
-
-<div class="cv-box reveal">
-
-<div>
-
-<div class="section-number">
-Professional Resume
-</div>
-
-<h2 style="font-size:34px;">
-Complete CV
-</h2>
-
-<p>
-View or download Irfan Ansari's complete professional CV.
-</p>
-
-</div>
-
-<a
-href="./Irfan-Ansari-CV.pdf"
-class="btn btn-primary"
-target="_blank"
-download>
-DOWNLOAD CV
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
 <section id="contact">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head reveal">
+        <div class="section-heading">
 
-<div>
+            <div class="section-number">
+                07 — CONTACT
+            </div>
 
-<div class="section-number">
-08 / Contact
-</div>
+            <h2>
+                Let's Connect
+            </h2>
 
-<h2>
-Professional connection.
-</h2>
+            <p>
+                Professional enquiries and opportunities are welcome.
+            </p>
 
-</div>
-
-<p class="section-description">
-For professional opportunities and document-control
-or operations-related discussions.
-</p>
-
-</div>
+        </div>
 
 
-<div class="contact">
+        <div class="contact-grid">
 
 
-<div class="contact-card reveal">
+            <div class="contact-card">
 
-<div class="contact-label">
-Email
-</div>
+                <span>
+                    Email
+                </span>
 
-<a href="mailto:Irfan.ansari6600@gmail.com">
-Irfan.ansari6600@gmail.com
-</a>
+                <a href="mailto:Irfan.ansari6600@gmail.com">
+                    Irfan.ansari6600@gmail.com
+                </a>
 
-</div>
-
-
-<div class="contact-card reveal">
-
-<div class="contact-label">
-Mobile
-</div>
-
-<a href="tel:+966537866627">
-+966 53 786 6627
-</a>
-
-</div>
+            </div>
 
 
-<div class="contact-card reveal">
+            <div class="contact-card">
 
-<div class="contact-label">
-Location
-</div>
+                <span>
+                    Phone
+                </span>
 
-<a href="#">
-Jeddah, Saudi Arabia
-</a>
+                <a href="tel:+966537866627">
+                    +966 53 786 6627
+                </a>
 
-</div>
-
-
-<div class="contact-card reveal">
-
-<div class="contact-label">
-Current Position
-</div>
-
-<a href="#home">
-ASAS (MODON) · May 2026 – Present
-</a>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="contact-card">
 
-</div>
+                <span>
+                    Location
+                </span>
+
+                <p>
+                    Jeddah, Saudi Arabia
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
+</main>
 
-<!-- FOOTER -->
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
-© <span id="year"></span>
-Irfan Ansari · Document Control Manager – Operations & Industrial Development
+    <div class="container">
+
+        © 2026
+        <strong>IRFAN ANSARI</strong>
+        · Document Control Manager
+
+    </div>
 
 </footer>
 
 
+<!-- =========================================================
+     IMAGE ERROR HANDLER
+========================================================= -->
+
 <script>
 
-const observer =
-new IntersectionObserver(
-(entries) => {
+    const profileImage =
+        document.getElementById("profileImage");
 
-entries.forEach((entry) => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},
-{
-threshold:0.12
-}
-);
-
-document
-.querySelectorAll(".reveal")
-.forEach((element) => {
-
-observer.observe(element);
-
-});
+    const photoFallback =
+        document.getElementById("photoFallback");
 
 
-document.getElementById("year").textContent =
-new Date().getFullYear();
+    profileImage.addEventListener("error", function () {
+
+        this.style.display = "none";
+
+        photoFallback.style.display = "flex";
+
+    });
+
+
+    profileImage.addEventListener("load", function () {
+
+        this.style.display = "block";
+
+        photoFallback.style.display = "none";
+
+    });
 
 </script>
+
+
+<!-- =========================================================
+     SIMPLE SCROLL REVEAL
+========================================================= -->
+
+<script>
+
+    const revealElements =
+        document.querySelectorAll(
+            ".glass-card, .expertise-card, .project, .credential, .contact-card, .timeline-item"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+
+                        entry.target.style.transform =
+                            "translateY(0)";
+
+                        entry.target.style.transition =
+                            "opacity 0.8s ease, transform 0.8s ease";
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(element => {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(25px)";
+
+        observer.observe(element);
+
+    });
+
+</script>
+
 
 </body>
 </html>
