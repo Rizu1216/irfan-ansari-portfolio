@@ -1,1957 +1,2706 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Professional portfolio of Irfan Ansari - Document Control Manager, Operations & Industrial Development">
-
-    <title>IRFAN ANSARI | Document Control Manager</title>
-
-    <style>
-
-        /* =========================================================
-           GLOBAL
-        ========================================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Inter,
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background:
-                radial-gradient(
-                    circle at 80% 10%,
-                    rgba(210, 176, 92, 0.08),
-                    transparent 30%
-                ),
-                #07090d;
-
-            color: #f4f4f4;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        :root {
-            --gold: #d8b86a;
-            --gold-light: #f0d99a;
-            --white: #ffffff;
-            --muted: #9da4b0;
-            --dark: #07090d;
-            --card: rgba(255,255,255,0.035);
-            --border: rgba(255,255,255,0.10);
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .container {
-            width: min(1180px, 92%);
-            margin: auto;
-        }
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(7, 9, 13, 0.82);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .nav {
-            min-height: 76px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 900;
-            letter-spacing: 4px;
-            color: var(--gold);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .nav-links a {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #b9bec7;
-            transition: 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-
-            padding-top: 110px;
-            padding-bottom: 70px;
-
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-
-            width: 500px;
-            height: 500px;
-
-            top: 5%;
-            right: -180px;
-
-            background: rgba(216,184,106,0.08);
-            filter: blur(120px);
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .eyebrow {
-            color: var(--gold);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(58px, 8vw, 110px);
-            line-height: 0.86;
-            letter-spacing: -5px;
-            font-weight: 900;
-            margin-bottom: 28px;
-        }
-
-        .hero h1 span {
-            display: block;
-        }
-
-        .hero-role {
-            font-size: clamp(20px, 2vw, 27px);
-            line-height: 1.25;
-            color: #e8ebef;
-            max-width: 680px;
-            margin-bottom: 18px;
-        }
-
-        .hero-company {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
-
-        .hero-description {
-            color: var(--muted);
-            font-size: 15px;
-            max-width: 650px;
-            margin-bottom: 32px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            min-height: 48px;
-            padding: 0 23px;
-
-            border-radius: 30px;
-
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-
-            transition: 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: #111;
-        }
-
-        .btn-primary:hover {
-            background: var(--gold-light);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(216,184,106,0.20);
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(216,184,106,0.35);
-            color: #ddd;
-            background: rgba(255,255,255,0.025);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-            transform: translateY(-3px);
-        }
-
-        /* =========================================================
-           HERO PHOTO
-        ========================================================= */
-
-        .hero-photo {
-            position: relative;
-            width: 100%;
-            max-width: 440px;
-            margin: auto;
-
-            min-height: 560px;
-
-            border-radius: 34px;
-
-            border: 1px solid rgba(216,184,106,0.25);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(216,184,106,0.10),
-                    rgba(255,255,255,0.02)
-                );
-
-            padding: 12px;
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,0.40),
-                inset 0 0 50px rgba(216,184,106,0.03);
-
-            overflow: hidden;
-        }
-
-        .hero-photo::before {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    120deg,
-                    transparent 30%,
-                    rgba(255,255,255,0.08),
-                    transparent 70%
-                );
-
-            transform: translateX(-100%);
-            animation: shine 7s infinite;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        @keyframes shine {
-            0%, 65% {
-                transform: translateX(-100%);
-            }
-
-            85%, 100% {
-                transform: translateX(100%);
-            }
-        }
-
-        .profile-photo {
-            display: block;
-
-            width: 100%;
-            height: 100%;
-
-            min-height: 534px;
-
-            object-fit: cover;
-            object-position: center;
-
-            border-radius: 25px;
-
-            position: relative;
-            z-index: 1;
-
-            background: #11151c;
-        }
-
-        /* If image cannot load */
-
-        .photo-fallback {
-            position: absolute;
-            inset: 12px;
-
-            border-radius: 25px;
-
-            display: none;
-
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(216,184,106,0.12),
-                    transparent 60%
-                ),
-                #10141b;
-
-            color: var(--gold);
-
-            font-size: 25px;
-            font-weight: 900;
-            letter-spacing: 5px;
-
-            z-index: 3;
-        }
-
-        .photo-tag {
-            position: absolute;
-            left: 28px;
-            bottom: 30px;
-
-            z-index: 5;
-
-            padding: 13px 17px;
-
-            border-radius: 12px;
-
-            background: rgba(5,7,10,0.82);
-            border: 1px solid rgba(216,184,106,0.25);
-
-            backdrop-filter: blur(15px);
-        }
-
-        .photo-tag strong {
-            display: block;
-            color: white;
-            font-size: 13px;
-        }
-
-        .photo-tag span {
-            color: var(--gold);
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* =========================================================
-           SECTIONS
-        ========================================================= */
-
-        section {
-            padding: 110px 0;
-        }
-
-        .section-heading {
-            margin-bottom: 55px;
-        }
-
-        .section-number {
-            color: var(--gold);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(35px, 5vw, 60px);
-            line-height: 1;
-            letter-spacing: -2px;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-            max-width: 650px;
-            margin-top: 18px;
-        }
-
-        /* =========================================================
-           PROFILE
-        ========================================================= */
-
-        .profile-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .glass-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 32px;
-
-            transition: 0.35s ease;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(216,184,106,0.25);
-        }
-
-        .glass-card h3 {
-            color: var(--gold);
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-        }
-
-        .glass-card p {
-            color: #b7bdc6;
-            font-size: 15px;
-        }
-
-        /* =========================================================
-           STATS
-        ========================================================= */
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 25px;
-        }
-
-        .stat {
-            padding: 25px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: rgba(255,255,255,0.025);
-        }
-
-        .stat strong {
-            display: block;
-            font-size: 30px;
-            color: var(--gold);
-            margin-bottom: 5px;
-        }
-
-        .stat span {
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        /* =========================================================
-           JOURNEY
-        ========================================================= */
-
-        .timeline {
-            position: relative;
-            max-width: 950px;
-        }
-
-        .timeline::before {
-            content: "";
-
-            position: absolute;
-            left: 8px;
-            top: 0;
-            bottom: 0;
-
-            width: 1px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    var(--gold),
-                    rgba(216,184,106,0.05)
-                );
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 45px;
-            margin-bottom: 45px;
-        }
-
-        .timeline-item::before {
-            content: "";
-
-            position: absolute;
-            left: 2px;
-            top: 8px;
-
-            width: 13px;
-            height: 13px;
-
-            border-radius: 50%;
-
-            background: var(--gold);
-
-            box-shadow:
-                0 0 0 5px rgba(216,184,106,0.08);
-        }
-
-        .timeline-date {
-            color: var(--gold);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-
-        .timeline-item h3 {
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-
-        .timeline-company {
-            color: #c7ccd4;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-
-        .timeline-item p {
-            color: var(--muted);
-            max-width: 750px;
-            font-size: 14px;
-        }
-
-        /* =========================================================
-           EXPERTISE
-        ========================================================= */
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .expertise-card {
-            min-height: 190px;
-
-            padding: 28px;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.045),
-                    rgba(255,255,255,0.015)
-                );
-
-            border: 1px solid var(--border);
-
-            transition: 0.35s ease;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(216,184,106,0.35);
-        }
-
-        .expertise-icon {
-            color: var(--gold);
-            font-size: 24px;
-            margin-bottom: 18px;
-        }
-
-        .expertise-card h3 {
-            font-size: 17px;
-            margin-bottom: 9px;
-        }
-
-        .expertise-card p {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        /* =========================================================
-           DOCUMENT FLOW
-        ========================================================= */
-
-        .flow {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 12px;
-        }
-
-        .flow-box {
-            padding: 22px 15px;
-
-            border-radius: 18px;
-
-            text-align: center;
-
-            border: 1px solid var(--border);
-            background: rgba(255,255,255,0.025);
-
-            position: relative;
-        }
-
-        .flow-box strong {
-            display: block;
-            color: var(--gold);
-            font-size: 12px;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .flow-box span {
-            color: var(--muted);
-            font-size: 11px;
-        }
-
-        /* =========================================================
-           PROJECTS
-        ========================================================= */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .project {
-            padding: 30px;
-
-            border-radius: 25px;
-
-            background: var(--card);
-            border: 1px solid var(--border);
-
-            transition: 0.35s ease;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-            border-color: rgba(216,184,106,0.30);
-        }
-
-        .project-number {
-            color: var(--gold);
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .project h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* =========================================================
-           CREDENTIALS
-        ========================================================= */
-
-        .credentials {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .credential {
-            padding: 28px;
-
-            border: 1px solid var(--border);
-            border-radius: 22px;
-
-            background: rgba(255,255,255,0.025);
-        }
-
-        .credential h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
-        }
-
-        .credential p {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        /* =========================================================
-           CV
-        ========================================================= */
-
-        .cv-box {
-            text-align: center;
-
-            padding: 65px 30px;
-
-            border-radius: 30px;
-
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(216,184,106,0.09),
-                    transparent 65%
-                );
-
-            border: 1px solid rgba(216,184,106,0.20);
-        }
-
-        .cv-box h2 {
-            font-size: clamp(35px, 5vw, 58px);
-            margin-bottom: 14px;
-        }
-
-        .cv-box p {
-            color: var(--muted);
-            max-width: 600px;
-            margin: 0 auto 28px;
-        }
-
-        /* =========================================================
-           CONTACT
-        ========================================================= */
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .contact-card {
-            padding: 28px;
-
-            border: 1px solid var(--border);
-            border-radius: 22px;
-
-            background: rgba(255,255,255,0.025);
-        }
-
-        .contact-card span {
-            display: block;
-            color: var(--gold);
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .contact-card a,
-        .contact-card p {
-            color: #e8e9ec;
-            font-size: 14px;
-            word-break: break-word;
-        }
-
-        .contact-card a:hover {
-            color: var(--gold);
-        }
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        footer {
-            padding: 35px 0;
-
-            border-top: 1px solid var(--border);
-
-            text-align: center;
-
-            color: #737a85;
-            font-size: 12px;
-        }
-
-        footer strong {
-            color: var(--gold);
-        }
-
-        /* =========================================================
-           REVEAL ANIMATION
-        ========================================================= */
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-
-            animation: reveal 1s ease forwards;
-        }
-
-        @keyframes reveal {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-
-        @media (max-width: 950px) {
-
-            .nav-links {
-                gap: 14px;
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .hero-photo {
-                max-width: 520px;
-            }
-
-            .profile-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .expertise-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .credentials {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .flow {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-        @media (max-width: 650px) {
-
-            header {
-                position: absolute;
-            }
-
-            .nav {
-                min-height: 65px;
-            }
-
-            .logo {
-                font-size: 17px;
-                letter-spacing: 3px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            section {
-                padding: 75px 0;
-            }
-
-            .hero {
-                padding-top: 100px;
-            }
-
-            .hero h1 {
-                font-size: 57px;
-                letter-spacing: -3px;
-            }
-
-            .hero-role {
-                font-size: 20px;
-            }
-
-            .hero-photo {
-                min-height: 460px;
-            }
-
-            .profile-photo {
-                min-height: 434px;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .expertise-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .credentials {
-                grid-template-columns: 1fr;
-            }
-
-            .flow {
-                grid-template-columns: 1fr;
-            }
-
-            .glass-card,
-            .project,
-            .credential,
-            .contact-card {
-                padding: 24px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IRFAN ANSARI | Document Control Manager</title>
+
+<meta name="description"
+content="Irfan Ansari — Document Control Manager, Operations & Industrial Development. Document Control, Aconex, EDMS, Project Documentation and Records Management.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#070a0f;
+    color:#e8edf3;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+    --bg:#070a0f;
+    --panel:#0d1219;
+    --panel2:#111821;
+    --line:rgba(255,255,255,.09);
+    --text:#e8edf3;
+    --muted:#8d9aaa;
+    --gold:#d7ad5a;
+    --gold2:#f0cf80;
+    --blue:#5c8dbd;
+    --green:#55c68b;
+    --red:#e06b6b;
+    --cyan:#5dc7d9;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-5;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    mask-image:linear-gradient(
+        to bottom,
+        black,
+        rgba(0,0,0,.5),
+        transparent
+    );
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:100;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.015) 50%,
+            transparent 50%
+        );
+
+    background-size:100% 4px;
+    opacity:.18;
+}
+
+/* =========================================================
+   TECHNICAL GLOW
+========================================================= */
+
+.glow{
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.07;
+    pointer-events:none;
+    z-index:-3;
+}
+
+.glow.one{
+    background:#3c78a8;
+    top:-200px;
+    left:-200px;
+}
+
+.glow.two{
+    background:#c6973e;
+    right:-200px;
+    top:35%;
+}
+
+.glow.three{
+    background:#2f9a91;
+    left:20%;
+    bottom:-300px;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:90;
+
+    height:76px;
+
+    background:rgba(7,10,15,.78);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+    width:min(1200px,92%);
+    height:100%;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:'JetBrains Mono',monospace;
+    font-size:20px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:#8e99a8;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold2);
+}
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    color:#91a0af;
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+    background:var(--green);
+    border-radius:50%;
+    box-shadow:0 0 12px rgba(85,198,139,.8);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{opacity:1}
+    50%{opacity:.35}
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+section{
+    position:relative;
+    padding:120px 0;
+}
+
+.section-code{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.section-title{
+    font-size:clamp(34px,5vw,60px);
+    line-height:1;
+    letter-spacing:-2px;
+    margin-bottom:22px;
+}
+
+.section-description{
+    max-width:650px;
+    color:var(--muted);
+    line-height:1.8;
+    font-size:15px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+    padding-top:150px;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
+    align-items:center;
+}
+
+.system-label{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:9px 14px;
+
+    border:1px solid rgba(215,173,90,.25);
+    background:rgba(215,173,90,.04);
+
+    color:#b9c3ce;
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:1.5px;
+
+    margin-bottom:30px;
+}
+
+.system-label::before{
+    content:"";
+    width:6px;
+    height:6px;
+    background:var(--gold);
+    border-radius:50%;
+    box-shadow:0 0 12px var(--gold);
+}
+
+.hero h1{
+    font-size:clamp(55px,9vw,112px);
+    line-height:.86;
+    letter-spacing:-6px;
+    font-weight:800;
+    margin-bottom:32px;
+}
+
+.hero h1 span{
+    display:block;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(232,237,243,.65);
+}
+
+.hero-role{
+    font-size:20px;
+    line-height:1.5;
+    max-width:700px;
+    color:#c9d1da;
+}
+
+.hero-role strong{
+    color:white;
+}
+
+.hero-company{
+    margin-top:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--gold2);
+}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+    margin-top:38px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 22px;
+
+    border:1px solid var(--line);
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.btn.primary{
+    background:var(--gold);
+    color:#111;
+    border-color:var(--gold);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn.primary:hover{
+    box-shadow:0 12px 35px rgba(215,173,90,.2);
+}
+
+.btn.secondary:hover{
+    border-color:var(--gold);
+    color:var(--gold2);
+}
+
+/* =========================================================
+   HERO DOCUMENT
+========================================================= */
+
+.document-frame{
+    position:relative;
+    width:100%;
+    max-width:430px;
+    margin-left:auto;
+
+    padding:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.015)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.5),
+        inset 0 0 50px rgba(255,255,255,.015);
+
+    animation:floatDocument 6s ease-in-out infinite;
+}
+
+@keyframes floatDocument{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-12px) rotate(.4deg);
+    }
+}
+
+.document-inner{
+    position:relative;
+    overflow:hidden;
+    background:#111821;
+}
+
+.document-inner::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    height:2px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    box-shadow:0 0 20px var(--gold);
+
+    animation:scan 4s linear infinite;
+    z-index:3;
+}
+
+@keyframes scan{
+    0%{top:-5%}
+    100%{top:105%}
+}
+
+.profile-photo{
+    display:block;
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:center;
+    filter:saturate(.85) contrast(1.05);
+
+    transition:.6s;
+}
+
+.document-frame:hover .profile-photo{
+    transform:scale(1.03);
+    filter:saturate(1) contrast(1.05);
+}
+
+.doc-top{
+    position:absolute;
+    top:14px;
+    left:14px;
+    right:14px;
+
+    display:flex;
+    justify-content:space-between;
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:8px;
+    letter-spacing:1px;
+
+    color:#d9e0e7;
+
+    z-index:5;
+}
+
+.doc-bottom{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:18px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.92)
+    );
+
+    padding-top:70px;
+}
+
+.doc-name{
+    font-size:20px;
+    font-weight:700;
+}
+
+.doc-role{
+    color:var(--gold2);
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    margin-top:5px;
+}
+
+.document-meta{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    margin-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.meta-cell{
+    padding:10px 8px;
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.meta-cell:last-child{
+    border-right:0;
+}
+
+.meta-label{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:7px;
+    color:#768393;
+    margin-bottom:4px;
+}
+
+.meta-value{
+    font-family:'JetBrains Mono',monospace;
+    font-size:8px;
+    color:#d8dee5;
+}
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+
+    overflow:hidden;
+    padding:15px 0;
+
+    background:rgba(255,255,255,.015);
+}
+
+.marquee-track{
+    display:flex;
+    width:max-content;
+    animation:marquee 30s linear infinite;
+}
+
+.marquee-item{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:2px;
+    color:#697686;
+
+    padding:0 35px;
+}
+
+.marquee-item span{
+    color:var(--gold);
+}
+
+@keyframes marquee{
+    from{transform:translateX(0)}
+    to{transform:translateX(-50%)}
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:start;
+}
+
+.profile-card{
+    border:1px solid var(--line);
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.035),
+        rgba(255,255,255,.012)
+    );
+
+    padding:30px;
+}
+
+.card-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    letter-spacing:1.5px;
+    color:var(--gold);
+    margin-bottom:18px;
+}
+
+.profile-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.profile-card p{
+    color:var(--muted);
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin-top:45px;
+}
+
+.stat{
+    padding:28px 15px;
+    border-right:1px solid var(--line);
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat-number{
+    font-size:36px;
+    font-weight:700;
+}
+
+.stat-number span{
+    color:var(--gold);
+}
+
+.stat-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    color:#758293;
+    margin-top:8px;
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+    position:relative;
+    margin-top:65px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:20px;
+    width:1px;
+    background:linear-gradient(
+        var(--gold),
+        transparent
+    );
+}
+
+.timeline-item{
+    position:relative;
+    padding-left:65px;
+    padding-bottom:65px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:14px;
+    top:4px;
+
+    width:13px;
+    height:13px;
+
+    border:2px solid var(--gold);
+    background:var(--bg);
+
+    transform:rotate(45deg);
+}
+
+.timeline-code{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.timeline-item h3{
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.timeline-company{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:#9aa6b5;
+    margin-bottom:15px;
+}
+
+.timeline-item p{
+    max-width:700px;
+    color:var(--muted);
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* =========================================================
+   DOCUMENT FLOW
+========================================================= */
+
+.flow-wrapper{
+    margin-top:60px;
+    overflow:hidden;
+}
+
+.flow{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+}
+
+.flow-step{
+    position:relative;
+    padding:25px 15px;
+
+    min-height:145px;
+
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.02);
+
+    transition:.35s;
+}
+
+.flow-step:hover{
+    transform:translateY(-7px);
+    border-color:rgba(215,173,90,.5);
+    background:rgba(215,173,90,.04);
+}
+
+.flow-number{
+    font-family:'JetBrains Mono',monospace;
+    color:#586575;
+    font-size:9px;
+}
+
+.flow-icon{
+    font-size:22px;
+    margin:20px 0 12px;
+}
+
+.flow-step h4{
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.flow-step p{
+    font-size:10px;
+    line-height:1.6;
+    color:#768292;
+    margin-top:8px;
+}
+
+/* =========================================================
+   EXPERTISE
+========================================================= */
+
+.expertise-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:60px;
+}
+
+.expertise-card{
+    min-height:210px;
+    padding:25px;
+
+    border:1px solid var(--line);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.008)
+        );
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.expertise-card::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.5s;
+}
+
+.expertise-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(215,173,90,.3);
+}
+
+.expertise-card:hover::after{
+    width:100%;
+}
+
+.expertise-number{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    color:var(--gold);
+}
+
+.expertise-card h3{
+    margin-top:55px;
+    font-size:19px;
+}
+
+.expertise-card p{
+    margin-top:10px;
+    color:#7d8998;
+    line-height:1.7;
+    font-size:12px;
+}
+
+/* =========================================================
+   CONTROL PANEL
+========================================================= */
+
+.control-panel{
+    margin-top:60px;
+
+    border:1px solid var(--line);
+    background:#0a0e14;
+}
+
+.panel-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px 20px;
+
+    border-bottom:1px solid var(--line);
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    color:#7e8a99;
+}
+
+.panel-live{
+    color:var(--green);
+}
+
+.panel-body{
+    padding:35px;
+}
+
+.control-row{
+    display:grid;
+    grid-template-columns:180px 1fr 100px;
+    gap:20px;
+    align-items:center;
+
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.control-row:last-child{
+    border-bottom:0;
+}
+
+.control-name{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    color:#aab5c1;
+}
+
+.progress{
+    height:5px;
+    background:#171e27;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0;
+    background:linear-gradient(
+        90deg,
+        var(--blue),
+        var(--gold)
+    );
+
+    transition:width 1.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.control-value{
+    text-align:right;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    color:var(--gold2);
+}
+
+/* =========================================================
+   PROJECT CARDS
+========================================================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:60px;
+}
+
+.project{
+    position:relative;
+
+    padding:30px;
+
+    min-height:220px;
+
+    border:1px solid var(--line);
+
+    background:#0c1118;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+    border-color:rgba(215,173,90,.3);
+}
+
+.project::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+
+    width:90px;
+    height:90px;
+
+    border-top:1px solid var(--gold);
+    border-right:1px solid var(--gold);
+
+    opacity:.4;
+}
+
+.project-number{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    color:var(--gold);
+}
+
+.project h3{
+    font-size:22px;
+    margin-top:35px;
+}
+
+.project p{
+    margin-top:12px;
+    color:#7e8998;
+    line-height:1.7;
+    font-size:13px;
+}
+
+/* =========================================================
+   CV DOCUMENT
+========================================================= */
+
+.cv-section{
+    padding-bottom:140px;
+}
+
+.cv-document{
+    position:relative;
+    margin-top:60px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:#10161e;
+
+    box-shadow:0 40px 100px rgba(0,0,0,.35);
+
+    overflow:hidden;
+}
+
+.cv-header{
+    display:grid;
+    grid-template-columns:1fr 150px 150px 150px;
+
+    border-bottom:1px solid var(--line);
+}
+
+.cv-cell{
+    padding:20px;
+    border-right:1px solid var(--line);
+}
+
+.cv-cell:last-child{
+    border-right:0;
+}
+
+.cv-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:8px;
+    color:#687585;
+    margin-bottom:7px;
+}
+
+.cv-value{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+}
+
+.approved{
+    color:var(--green);
+}
+
+.cv-content{
+    padding:45px;
+}
+
+.cv-content h3{
+    font-size:30px;
+}
+
+.cv-content p{
+    color:#84909e;
+    line-height:1.8;
+    max-width:700px;
+    margin-top:12px;
+}
+
+.cv-button{
+    display:inline-block;
+    margin-top:30px;
+
+    padding:15px 24px;
+
+    background:var(--gold);
+    color:#111;
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.cv-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(215,173,90,.2);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:55px;
+}
+
+.contact-card{
+    padding:25px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.018);
+}
+
+.contact-label{
+    font-family:'JetBrains Mono',monospace;
+    color:#697687;
+    font-size:9px;
+    margin-bottom:10px;
+}
+
+.contact-value{
+    font-size:15px;
+}
+
+.contact-value a:hover{
+    color:var(--gold2);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    border-top:1px solid var(--line);
+    padding:25px 0;
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    color:#606d7c;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================================================
+   CURSOR
+========================================================= */
+
+.cursor-line{
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:rgba(215,173,90,.08);
+    pointer-events:none;
+    z-index:-1;
+    left:50%;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding-top:125px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .document-frame{
+        margin:auto;
+        max-width:380px;
+    }
+
+    .profile-grid{
+        grid-template-columns:1fr;
+    }
+
+    .flow{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .expertise-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .cv-header{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cv-cell{
+        border-bottom:1px solid var(--line);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .stat:nth-child(1),
+    .stat:nth-child(2){
+        border-bottom:1px solid var(--line);
+    }
+
+    .control-row{
+        grid-template-columns:130px 1fr 60px;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:85px 0;
+    }
+
+    .hero h1{
+        font-size:60px;
+        letter-spacing:-4px;
+    }
+
+    .hero-role{
+        font-size:16px;
+    }
+
+    .flow{
+        grid-template-columns:1fr;
+    }
+
+    .expertise-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat-number{
+        font-size:28px;
+    }
+
+    .panel-body{
+        padding:20px;
+    }
+
+    .control-row{
+        grid-template-columns:1fr;
+        gap:9px;
+    }
+
+    .control-value{
+        text-align:left;
+    }
+
+    .cv-content{
+        padding:25px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .document-meta{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+
+</style>
 </head>
-
 
 <body>
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<div class="glow one"></div>
+<div class="glow two"></div>
+<div class="glow three"></div>
 
-<header>
+<div class="cursor-line"></div>
 
-    <div class="container nav">
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-        <a href="#home" class="logo">
-            IA.
-        </a>
+<nav class="navbar">
 
-        <nav class="nav-links">
+<div class="nav-inner">
 
-            <a href="#profile">Profile</a>
-            <a href="#journey">Journey</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#projects">Projects</a>
-            <a href="#credentials">Credentials</a>
-            <a href="#contact">Contact</a>
+<a href="#top" class="logo">
+IA<span>.</span>
+</a>
 
-        </nav>
+<div class="nav-links">
 
-    </div>
+<a href="#profile">PROFILE</a>
+<a href="#journey">EXPERIENCE</a>
+<a href="#flow">FLOW</a>
+<a href="#expertise">SYSTEMS</a>
+<a href="#projects">PROJECTS</a>
+<a href="#cv">CV</a>
+<a href="#contact">CONTACT</a>
 
-</header>
+</div>
+
+<div class="status">
+<span class="status-dot"></span>
+SYSTEM ACTIVE
+</div>
+
+</div>
+
+</nav>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
-<main id="home">
+<main id="top">
 
 <section class="hero">
 
-    <div class="container hero-grid">
+<div class="container">
 
-        <div class="reveal">
+<div class="hero-grid">
 
-            <div class="eyebrow">
-                Document Control • Operations • Industrial Development
-            </div>
+<div>
 
-            <h1>
-                <span>IRFAN</span>
-                <span>ANSARI</span>
-            </h1>
+<div class="system-label">
+DOCUMENT CONTROL SYSTEM / PROFESSIONAL PROFILE
+</div>
 
-            <div class="hero-role">
-                Document Control Manager – Operations & Industrial Development
-            </div>
+<h1>
+IRFAN
+<span>ANSARI</span>
+</h1>
 
-            <div class="hero-company">
-                ASAS (MODON) · May 2026 – Present
-            </div>
+<div class="hero-role">
 
-            <p class="hero-description">
-                15+ years of international experience across Saudi Arabia
-                and India, with professional expertise in document control,
-                Aconex, EDMS, project documentation, construction and
-                engineering environments.
-            </p>
+<strong>Document Control Manager</strong>
+<br>
 
-            <div class="hero-buttons">
+Operations & Industrial Development
 
-                <a
-                    href="Irfan-Ansari-CV.pdf"
-                    class="btn btn-primary"
-                    target="_blank"
-                    rel="noopener">
-                    View / Download CV
-                </a>
+<div class="hero-company">
+ASAS (MODON) · MAY 2026 — PRESENT
+</div>
 
-                <a
-                    href="#journey"
-                    class="btn btn-outline">
-                    Explore Career
-                </a>
+</div>
 
-                <a
-                    href="#contact"
-                    class="btn btn-outline">
-                    Contact
-                </a>
+<div class="hero-actions">
 
-            </div>
+<a href="#cv" class="btn primary">
+VIEW CONTROLLED CV →
+</a>
 
-        </div>
+<a href="#flow" class="btn secondary">
+EXPLORE WORKFLOW
+</a>
+
+</div>
+
+</div>
 
 
-        <!-- =====================================================
-             PHOTO
-        ====================================================== -->
+<!-- DOCUMENT PHOTO -->
 
-        <div class="hero-photo reveal">
+<div class="document-frame">
 
-            <!-- EXACT CURRENT GITHUB FILE NAME -->
-            <img
-                src="irfan-profile.png"
-                alt="Irfan Ansari"
-                class="profile-photo"
-                id="profileImage">
+<div class="document-inner">
 
-            <!-- Fallback if image cannot load -->
-            <div
-                class="photo-fallback"
-                id="photoFallback">
+<div class="doc-top">
 
-                IRFAN<br>
-                ANSARI
+<span>DOCUMENT ID: IA-DC-001</span>
+<span>REV: 01</span>
 
-            </div>
+</div>
 
+<img
+src="irfan-profile.png"
+alt="Irfan Ansari"
+class="profile-photo"
+onerror="this.onerror=null;this.src='irfan-proflie.png';"
+>
 
-            <div class="photo-tag">
+<div class="doc-bottom">
 
-                <strong>ASAS · MODON</strong>
+<div class="doc-name">
+IRFAN ANSARI
+</div>
 
-                <span>
-                    Document Control Manager
-                </span>
+<div class="doc-role">
+DOCUMENT CONTROL MANAGER
+</div>
 
-            </div>
+<div class="document-meta">
 
-        </div>
+<div class="meta-cell">
+<span class="meta-label">STATUS</span>
+<span class="meta-value">ACTIVE</span>
+</div>
 
-    </div>
+<div class="meta-cell">
+<span class="meta-label">REVISION</span>
+<span class="meta-value">01</span>
+</div>
+
+<div class="meta-cell">
+<span class="meta-label">CLASS</span>
+<span class="meta-value">PROFILE</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
+     MARQUEE
+===================================================== -->
+
+<div class="marquee">
+
+<div class="marquee-track">
+
+<div class="marquee-item">
+<span>01</span> DOCUMENT CONTROL
+</div>
+
+<div class="marquee-item">
+<span>02</span> REVISION CONTROL
+</div>
+
+<div class="marquee-item">
+<span>03</span> ACONEX
+</div>
+
+<div class="marquee-item">
+<span>04</span> EDMS
+</div>
+
+<div class="marquee-item">
+<span>05</span> RECORDS MANAGEMENT
+</div>
+
+<div class="marquee-item">
+<span>06</span> PROJECT DOCUMENTATION
+</div>
+
+<div class="marquee-item">
+<span>07</span> INFORMATION FLOW
+</div>
+
+<div class="marquee-item">
+<span>01</span> DOCUMENT CONTROL
+</div>
+
+<div class="marquee-item">
+<span>02</span> REVISION CONTROL
+</div>
+
+<div class="marquee-item">
+<span>03</span> ACONEX
+</div>
+
+<div class="marquee-item">
+<span>04</span> EDMS
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
      PROFILE
-========================================================= -->
+===================================================== -->
 
 <section id="profile">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="profile-grid">
 
-            <div class="section-number">
-                01 — PROFILE
-            </div>
+<div class="reveal">
 
-            <h2>
-                Precision behind<br>
-                every document.
-            </h2>
+<div class="section-code">
+01 / PROFILE
+</div>
 
-            <p>
-                A structured approach to document governance,
-                project information, records management and
-                operational coordination.
-            </p>
+<h2 class="section-title">
+Precision behind<br>
+every document.
+</h2>
 
-        </div>
+<p class="section-description">
 
+A structured approach to document governance,
+project information, records management and
+operational coordination.
 
-        <div class="profile-grid">
+</p>
 
-            <div class="glass-card">
-
-                <h3>
-                    Professional Profile
-                </h3>
-
-                <p>
-                    Experienced document control professional with
-                    extensive exposure to construction, engineering,
-                    project documentation and industrial environments.
-                    Skilled in managing controlled information,
-                    document workflows, records and electronic
-                    document management systems.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="glass-card">
+<div class="profile-card reveal">
 
-                <h3>
-                    Current Position
-                </h3>
+<div class="card-label">
+PROFESSIONAL PROFILE
+</div>
 
-                <p>
-                    Document Control Manager – Operations &
-                    Industrial Development at ASAS (MODON),
-                    responsible for maintaining structured
-                    documentation and supporting controlled
-                    information flow across operational activities.
-                </p>
+<h3>
+Controlled information.
+Reliable execution.
+</h3>
 
-            </div>
+<p>
 
-        </div>
+Experienced document control professional with
+extensive exposure to construction, engineering,
+project documentation and industrial environments.
+
+</p>
+
+<br>
+
+<p>
+
+Skilled in managing controlled information,
+document workflows, records and electronic
+document management systems.
+
+</p>
+
+</div>
+
+</div>
 
 
-        <div class="stats">
+<div class="stats reveal">
 
-            <div class="stat">
-                <strong>15+</strong>
-                <span>Years Experience</span>
-            </div>
+<div class="stat">
 
-            <div class="stat">
-                <strong>2</strong>
-                <span>Countries</span>
-            </div>
+<div class="stat-number">
+15<span>+</span>
+</div>
 
-            <div class="stat">
-                <strong>EDMS</strong>
-                <span>Document Systems</span>
-            </div>
+<div class="stat-label">
+Years Experience
+</div>
 
-            <div class="stat">
-                <strong>01</strong>
-                <span>Professional Focus</span>
-            </div>
+</div>
 
-        </div>
+<div class="stat">
 
-    </div>
+<div class="stat-number">
+02
+</div>
+
+<div class="stat-label">
+Countries
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+EDMS
+</div>
+
+<div class="stat-label">
+Document Systems
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+01
+</div>
+
+<div class="stat-label">
+Current Focus
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
-     CAREER JOURNEY
-========================================================= -->
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
 
 <section id="journey">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="reveal">
 
-            <div class="section-number">
-                02 — JOURNEY
-            </div>
+<div class="section-code">
+02 / CAREER CONTROL LOG
+</div>
 
-            <h2>
-                Career Journey
-            </h2>
+<h2 class="section-title">
+Career Journey
+</h2>
 
-            <p>
-                Professional progression through document control,
-                project documentation and construction environments.
-            </p>
+<p class="section-description">
+Professional progression through document control,
+project documentation and construction environments.
+</p>
 
-        </div>
-
-
-        <div class="timeline">
+</div>
 
 
-            <div class="timeline-item">
+<div class="timeline">
 
-                <div class="timeline-date">
-                    MAY 2026 — PRESENT
-                </div>
+<div class="timeline-item reveal">
 
-                <h3>
-                    Document Control Manager
-                </h3>
+<div class="timeline-dot"></div>
 
-                <div class="timeline-company">
-                    ASAS (MODON) · Operations & Industrial Development
-                </div>
+<div class="timeline-code">
+MAY 2026 — PRESENT / CURRENT REVISION
+</div>
 
-                <p>
-                    Managing document control activities,
-                    information flow and structured documentation
-                    within operations and industrial development.
-                </p>
+<h3>
+Document Control Manager
+</h3>
 
-            </div>
+<div class="timeline-company">
+ASAS (MODON) · OPERATIONS & INDUSTRIAL DEVELOPMENT
+</div>
 
+<p>
 
-            <div class="timeline-item">
+Managing document control activities,
+information flow and structured documentation
+within operations and industrial development.
 
-                <div class="timeline-date">
-                    PREVIOUS EXPERIENCE
-                </div>
+</p>
 
-                <h3>
-                    Document Control & Project Documentation
-                </h3>
-
-                <div class="timeline-company">
-                    Saudi Arabia & India
-                </div>
-
-                <p>
-                    Extensive experience supporting construction,
-                    engineering and project environments through
-                    document control, EDMS and project information
-                    management.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="timeline-item">
+<div class="timeline-item reveal">
 
-                <div class="timeline-date">
-                    PROFESSIONAL DEVELOPMENT
-                </div>
+<div class="timeline-dot"></div>
 
-                <h3>
-                    Construction & Engineering Documentation
-                </h3>
+<div class="timeline-code">
+PREVIOUS EXPERIENCE / PROJECT ENVIRONMENTS
+</div>
 
-                <div class="timeline-company">
-                    Project-Based Environments
-                </div>
+<h3>
+Document Control & Project Documentation
+</h3>
 
-                <p>
-                    Developed strong expertise in document
-                    registration, transmittals, revision control,
-                    records management and controlled information
-                    distribution.
-                </p>
+<div class="timeline-company">
+SAUDI ARABIA & INDIA
+</div>
 
-            </div>
+<p>
+
+Extensive experience supporting construction,
+engineering and project environments through
+document control, EDMS and project information
+management.
+
+</p>
+
+</div>
 
 
-        </div>
+<div class="timeline-item reveal">
 
-    </div>
+<div class="timeline-dot"></div>
+
+<div class="timeline-code">
+PROFESSIONAL DEVELOPMENT
+</div>
+
+<h3>
+Construction & Engineering Documentation
+</h3>
+
+<div class="timeline-company">
+PROJECT-BASED ENVIRONMENTS
+</div>
+
+<p>
+
+Developed strong expertise in document registration,
+transmittals, revision control, records management
+and controlled information distribution.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
+     DOCUMENT FLOW
+===================================================== -->
+
+<section id="flow">
+
+<div class="container">
+
+<div class="reveal">
+
+<div class="section-code">
+03 / DOCUMENT LIFECYCLE
+</div>
+
+<h2 class="section-title">
+Information Flow
+</h2>
+
+<p class="section-description">
+
+A controlled document lifecycle ensures that the
+right information reaches the right people at
+the right time.
+
+</p>
+
+</div>
+
+
+<div class="flow-wrapper">
+
+<div class="flow">
+
+<div class="flow-step reveal">
+
+<div class="flow-number">01</div>
+
+<div class="flow-icon">↓</div>
+
+<h4>RECEIVE</h4>
+
+<p>
+Incoming documents
+</p>
+
+</div>
+
+
+<div class="flow-step reveal">
+
+<div class="flow-number">02</div>
+
+<div class="flow-icon">▣</div>
+
+<h4>REGISTER</h4>
+
+<p>
+Document tracking
+</p>
+
+</div>
+
+
+<div class="flow-step reveal">
+
+<div class="flow-number">03</div>
+
+<div class="flow-icon">⌕</div>
+
+<h4>REVIEW</h4>
+
+<p>
+Controlled review
+</p>
+
+</div>
+
+
+<div class="flow-step reveal">
+
+<div class="flow-number">04</div>
+
+<div class="flow-icon">✓</div>
+
+<h4>APPROVE</h4>
+
+<p>
+Approval control
+</p>
+
+</div>
+
+
+<div class="flow-step reveal">
+
+<div class="flow-number">05</div>
+
+<div class="flow-icon">→</div>
+
+<h4>DISTRIBUTE</h4>
+
+<p>
+Information flow
+</p>
+
+</div>
+
+
+<div class="flow-step reveal">
+
+<div class="flow-number">06</div>
+
+<div class="flow-icon">▤</div>
+
+<h4>ARCHIVE</h4>
+
+<p>
+Records retention
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
      EXPERTISE
-========================================================= -->
+===================================================== -->
 
 <section id="expertise">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="reveal">
 
-            <div class="section-number">
-                03 — EXPERTISE
-            </div>
+<div class="section-code">
+04 / CONTROL SYSTEMS
+</div>
 
-            <h2>
-                Core Expertise
-            </h2>
+<h2 class="section-title">
+Core Expertise
+</h2>
 
-            <p>
-                Key professional capabilities built through years
-                of project and operational experience.
-            </p>
+<p class="section-description">
 
-        </div>
+Key professional capabilities built through years
+of project and operational experience.
 
+</p>
 
-        <div class="expertise-grid">
-
-
-            <div class="expertise-card">
-
-                <div class="expertise-icon">
-                    01
-                </div>
-
-                <h3>
-                    Document Control
-                </h3>
-
-                <p>
-                    Controlled documentation, revision management,
-                    distribution, registration and document tracking.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="expertise-card">
+<div class="expertise-grid">
 
-                <div class="expertise-icon">
-                    02
-                </div>
+<div class="expertise-card reveal">
 
-                <h3>
-                    Aconex
-                </h3>
+<div class="expertise-number">
+01 / CONTROL
+</div>
 
-                <p>
-                    Electronic document workflows, transmittals,
-                    correspondence and controlled project information.
-                </p>
+<h3>
+Document Control
+</h3>
 
-            </div>
+<p>
+Controlled documentation, revision management,
+distribution, registration and document tracking.
+</p>
 
-
-            <div class="expertise-card">
-
-                <div class="expertise-icon">
-                    03
-                </div>
-
-                <h3>
-                    EDMS
-                </h3>
-
-                <p>
-                    Electronic document management systems and
-                    structured information repositories.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="expertise-card">
+<div class="expertise-card reveal">
 
-                <div class="expertise-icon">
-                    04
-                </div>
+<div class="expertise-number">
+02 / PLATFORM
+</div>
 
-                <h3>
-                    Project Documentation
-                </h3>
+<h3>
+Aconex
+</h3>
 
-                <p>
-                    Managing project records and documentation
-                    throughout project information lifecycles.
-                </p>
+<p>
+Electronic document workflows, transmittals,
+correspondence and controlled project information.
+</p>
 
-            </div>
-
-
-            <div class="expertise-card">
-
-                <div class="expertise-icon">
-                    05
-                </div>
-
-                <h3>
-                    Records Management
-                </h3>
-
-                <p>
-                    Structured filing, retrieval, archiving and
-                    controlled retention of project information.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="expertise-card">
+<div class="expertise-card reveal">
 
-                <div class="expertise-icon">
-                    06
-                </div>
+<div class="expertise-number">
+03 / SYSTEM
+</div>
 
-                <h3>
-                    Operations Support
-                </h3>
+<h3>
+EDMS
+</h3>
 
-                <p>
-                    Supporting operational and industrial development
-                    activities through reliable information control.
-                </p>
+<p>
+Electronic document management systems and
+structured information repositories.
+</p>
 
-            </div>
+</div>
 
 
-        </div>
+<div class="expertise-card reveal">
 
-    </div>
+<div class="expertise-number">
+04 / PROJECT
+</div>
+
+<h3>
+Project Documentation
+</h3>
+
+<p>
+Managing project records and documentation
+throughout project information lifecycles.
+</p>
+
+</div>
+
+
+<div class="expertise-card reveal">
+
+<div class="expertise-number">
+05 / RECORDS
+</div>
+
+<h3>
+Records Management
+</h3>
+
+<p>
+Structured filing, retrieval, archiving and
+controlled retention of project information.
+</p>
+
+</div>
+
+
+<div class="expertise-card reveal">
+
+<div class="expertise-number">
+06 / OPERATIONS
+</div>
+
+<h3>
+Operations Support
+</h3>
+
+<p>
+Supporting operational and industrial development
+activities through reliable information control.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CONTROL PANEL -->
+
+<div class="control-panel reveal">
+
+<div class="panel-header">
+
+<span>
+DOCUMENT CONTROL / SYSTEM CAPABILITY MONITOR
+</span>
+
+<span class="panel-live">
+● ACTIVE
+</span>
+
+</div>
+
+
+<div class="panel-body">
+
+<div class="control-row">
+
+<div class="control-name">
+DOCUMENT CONTROL
+</div>
+
+<div class="progress">
+<div class="progress-bar" data-width="96%"></div>
+</div>
+
+<div class="control-value">
+96%
+</div>
+
+</div>
+
+
+<div class="control-row">
+
+<div class="control-name">
+EDMS
+</div>
+
+<div class="progress">
+<div class="progress-bar" data-width="92%"></div>
+</div>
+
+<div class="control-value">
+92%
+</div>
+
+</div>
+
+
+<div class="control-row">
+
+<div class="control-name">
+ACONEX
+</div>
+
+<div class="progress">
+<div class="progress-bar" data-width="90%"></div>
+</div>
+
+<div class="control-value">
+90%
+</div>
+
+</div>
+
+
+<div class="control-row">
+
+<div class="control-name">
+RECORDS
+</div>
+
+<div class="progress">
+<div class="progress-bar" data-width="94%"></div>
+</div>
+
+<div class="control-value">
+94%
+</div>
+
+</div>
+
+
+<div class="control-row">
+
+<div class="control-name">
+PROJECT INFO
+</div>
+
+<div class="progress">
+<div class="progress-bar" data-width="93%"></div>
+</div>
+
+<div class="control-value">
+93%
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
-     DOCUMENT FLOW
-========================================================= -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <div class="section-number">
-                04 — DOCUMENT FLOW
-            </div>
-
-            <h2>
-                Information Flow
-            </h2>
-
-            <p>
-                A structured document lifecycle ensures that the
-                right information reaches the right people at the
-                right time.
-            </p>
-
-        </div>
-
-
-        <div class="flow">
-
-            <div class="flow-box">
-                <strong>RECEIVE</strong>
-                <span>Incoming documents</span>
-            </div>
-
-            <div class="flow-box">
-                <strong>REGISTER</strong>
-                <span>Document tracking</span>
-            </div>
-
-            <div class="flow-box">
-                <strong>REVIEW</strong>
-                <span>Controlled review</span>
-            </div>
-
-            <div class="flow-box">
-                <strong>DISTRIBUTE</strong>
-                <span>Information flow</span>
-            </div>
-
-            <div class="flow-box">
-                <strong>ARCHIVE</strong>
-                <span>Records retention</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      PROJECTS
-========================================================= -->
+===================================================== -->
 
 <section id="projects">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="reveal">
 
-            <div class="section-number">
-                05 — PROJECT EXPERIENCE
-            </div>
+<div class="section-code">
+05 / PROJECT ENVIRONMENT
+</div>
 
-            <h2>
-                Project Environment
-            </h2>
+<h2 class="section-title">
+Project Experience
+</h2>
 
-            <p>
-                Experience supporting documentation requirements
-                across construction, engineering and industrial
-                project environments.
-            </p>
+<p class="section-description">
 
-        </div>
+Experience supporting documentation requirements
+across construction, engineering and industrial
+project environments.
 
+</p>
 
-        <div class="projects-grid">
-
-
-            <div class="project">
-
-                <div class="project-number">
-                    PROJECT 01
-                </div>
-
-                <h3>
-                    Construction Documentation
-                </h3>
-
-                <p>
-                    Controlled project documentation including
-                    drawings, correspondence, transmittals,
-                    submissions and records.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="project">
+<div class="projects">
 
-                <div class="project-number">
-                    PROJECT 02
-                </div>
+<div class="project reveal">
 
-                <h3>
-                    Engineering Information
-                </h3>
+<div class="project-number">
+PROJECT 01 / DOCUMENTATION
+</div>
 
-                <p>
-                    Supporting structured information exchange
-                    between project stakeholders and engineering
-                    teams.
-                </p>
+<h3>
+Construction Documentation
+</h3>
 
-            </div>
+<p>
 
+Controlled project documentation including drawings,
+correspondence, transmittals, submissions and records.
 
-            <div class="project">
+</p>
 
-                <div class="project-number">
-                    PROJECT 03
-                </div>
-
-                <h3>
-                    EDMS Management
-                </h3>
-
-                <p>
-                    Managing electronic documentation through
-                    controlled digital systems and established
-                    workflows.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="project">
+<div class="project reveal">
 
-                <div class="project-number">
-                    PROJECT 04
-                </div>
+<div class="project-number">
+PROJECT 02 / ENGINEERING
+</div>
 
-                <h3>
-                    Industrial Development
-                </h3>
+<h3>
+Engineering Information
+</h3>
 
-                <p>
-                    Current professional focus supporting operations
-                    and industrial development through structured
-                    documentation.
-                </p>
+<p>
 
-            </div>
+Supporting structured information exchange between
+project stakeholders and engineering teams.
+
+</p>
+
+</div>
 
 
-        </div>
+<div class="project reveal">
 
-    </div>
+<div class="project-number">
+PROJECT 03 / DIGITAL SYSTEM
+</div>
+
+<h3>
+EDMS Management
+</h3>
+
+<p>
+
+Managing electronic documentation through controlled
+digital systems and established workflows.
+
+</p>
+
+</div>
+
+
+<div class="project reveal">
+
+<div class="project-number">
+PROJECT 04 / INDUSTRIAL
+</div>
+
+<h3>
+Industrial Development
+</h3>
+
+<p>
+
+Current professional focus supporting operations
+and industrial development through structured
+documentation.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
-     CREDENTIALS
-========================================================= -->
-
-<section id="credentials">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <div class="section-number">
-                06 — CREDENTIALS
-            </div>
-
-            <h2>
-                Professional Toolkit
-            </h2>
-
-            <p>
-                Systems, practices and capabilities supporting
-                effective document control.
-            </p>
-
-        </div>
-
-
-        <div class="credentials">
-
-
-            <div class="credential">
-
-                <h3>
-                    Aconex
-                </h3>
-
-                <p>
-                    Project communication and document management
-                    environment.
-                </p>
-
-            </div>
-
-
-            <div class="credential">
-
-                <h3>
-                    EDMS
-                </h3>
-
-                <p>
-                    Electronic document management and information
-                    repositories.
-                </p>
-
-            </div>
-
-
-            <div class="credential">
-
-                <h3>
-                    Document Control
-                </h3>
-
-                <p>
-                    Revision, distribution, registration and
-                    controlled documentation.
-                </p>
-
-            </div>
-
-
-            <div class="credential">
-
-                <h3>
-                    Records Management
-                </h3>
-
-                <p>
-                    Structured records, filing and information
-                    retention.
-                </p>
-
-            </div>
-
-
-            <div class="credential">
-
-                <h3>
-                    Project Coordination
-                </h3>
-
-                <p>
-                    Supporting project teams with reliable
-                    information flow.
-                </p>
-
-            </div>
-
-
-            <div class="credential">
-
-                <h3>
-                    Operations Support
-                </h3>
-
-                <p>
-                    Documentation support for operational and
-                    industrial development activities.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =====================================================
      CV
-========================================================= -->
+===================================================== -->
 
-<section>
+<section id="cv" class="cv-section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="cv-box">
+<div class="reveal">
 
-            <div class="section-number">
-                PROFESSIONAL CV
-            </div>
+<div class="section-code">
+06 / CONTROLLED DOCUMENT
+</div>
 
-            <h2>
-                Explore the Complete Profile
-            </h2>
+<h2 class="section-title">
+Professional CV
+</h2>
 
-            <p>
-                For detailed professional experience, responsibilities,
-                education and career history, view the complete CV.
-            </p>
+<p class="section-description">
 
-            <a
-                href="Irfan-Ansari-CV.pdf"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-primary">
+The complete professional CV contains detailed
+experience, responsibilities, education and
+career history.
 
-                View / Download CV
+</p>
 
-            </a>
+</div>
 
-        </div>
 
-    </div>
+<div class="cv-document reveal">
+
+<div class="cv-header">
+
+<div class="cv-cell">
+
+<div class="cv-label">
+DOCUMENT TITLE
+</div>
+
+<div class="cv-value">
+IRFAN ANSARI — PROFESSIONAL CV
+</div>
+
+</div>
+
+
+<div class="cv-cell">
+
+<div class="cv-label">
+DOCUMENT NO.
+</div>
+
+<div class="cv-value">
+IA-CV-001
+</div>
+
+</div>
+
+
+<div class="cv-cell">
+
+<div class="cv-label">
+REVISION
+</div>
+
+<div class="cv-value">
+REV 01
+</div>
+
+</div>
+
+
+<div class="cv-cell">
+
+<div class="cv-label">
+STATUS
+</div>
+
+<div class="cv-value approved">
+● CONTROLLED
+</div>
+
+</div>
+
+</div>
+
+
+<div class="cv-content">
+
+<h3>
+Professional Profile
+</h3>
+
+<p>
+
+Document Control Manager with experience across
+document control, Aconex, EDMS, project documentation,
+records management and operational information flow.
+
+</p>
+
+<a
+href="Irfan-Ansari-CV.pdf"
+class="cv-button"
+target="_blank"
+rel="noopener"
+>
+OPEN / DOWNLOAD CV →
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      CONTACT
-========================================================= -->
+===================================================== -->
 
 <section id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="reveal">
 
-            <div class="section-number">
-                07 — CONTACT
-            </div>
+<div class="section-code">
+07 / CONTACT CONTROL
+</div>
 
-            <h2>
-                Let's Connect
-            </h2>
+<h2 class="section-title">
+Let's Connect
+</h2>
 
-            <p>
-                Professional enquiries and opportunities are welcome.
-            </p>
+<p class="section-description">
 
-        </div>
+Professional enquiries and opportunities are welcome.
 
+</p>
 
-        <div class="contact-grid">
-
-
-            <div class="contact-card">
-
-                <span>
-                    Email
-                </span>
-
-                <a href="mailto:Irfan.ansari6600@gmail.com">
-                    Irfan.ansari6600@gmail.com
-                </a>
-
-            </div>
+</div>
 
 
-            <div class="contact-card">
+<div class="contact-grid">
 
-                <span>
-                    Phone
-                </span>
+<div class="contact-card reveal">
 
-                <a href="tel:+966537866627">
-                    +966 53 786 6627
-                </a>
+<div class="contact-label">
+EMAIL
+</div>
 
-            </div>
+<div class="contact-value">
 
+<a href="mailto:Irfan.ansari6600@gmail.com">
+Irfan.ansari6600@gmail.com
+</a>
 
-            <div class="contact-card">
+</div>
 
-                <span>
-                    Location
-                </span>
-
-                <p>
-                    Jeddah, Saudi Arabia
-                </p>
-
-            </div>
+</div>
 
 
-        </div>
+<div class="contact-card reveal">
 
-    </div>
+<div class="contact-label">
+PHONE
+</div>
+
+<div class="contact-value">
+
+<a href="tel:+966537866627">
++966 53 786 6627
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-card reveal">
+
+<div class="contact-label">
+LOCATION
+</div>
+
+<div class="contact-value">
+Jeddah, Saudi Arabia
+</div>
+
+</div>
+
+
+<div class="contact-card reveal">
+
+<div class="contact-label">
+CURRENT POSITION
+</div>
+
+<div class="contact-value">
+Document Control Manager — ASAS (MODON)
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
 
 </main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
-    <div class="container">
+<div class="container">
 
-        © 2026
-        <strong>IRFAN ANSARI</strong>
-        · Document Control Manager
+<div class="footer-inner">
 
-    </div>
+<span>
+© 2026 IRFAN ANSARI
+</span>
+
+<span>
+DOCUMENT CONTROL MANAGER / SYSTEM ACTIVE
+</span>
+
+</div>
+
+</div>
 
 </footer>
 
 
-<!-- =========================================================
-     IMAGE ERROR HANDLER
-========================================================= -->
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
-    const profileImage =
-        document.getElementById("profileImage");
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
-    const photoFallback =
-        document.getElementById("photoFallback");
+const revealElements =
+document.querySelectorAll('.reveal');
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('active');
+
+}
+
+});
+
+},
+
+{
+threshold:0.12
+}
+
+);
+
+revealElements.forEach(el=>{
+observer.observe(el);
+});
 
 
-    profileImage.addEventListener("error", function () {
+/* =========================================================
+   CONTROL PANEL ANIMATION
+========================================================= */
 
-        this.style.display = "none";
+const bars =
+document.querySelectorAll('.progress-bar');
 
-        photoFallback.style.display = "flex";
+const barObserver =
+new IntersectionObserver(
 
-    });
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const bar = entry.target;
+
+bar.style.width =
+bar.getAttribute('data-width');
+
+}
+
+});
+
+},
+
+{
+threshold:0.5
+}
+
+);
+
+bars.forEach(bar=>{
+barObserver.observe(bar);
+});
 
 
-    profileImage.addEventListener("load", function () {
+/* =========================================================
+   MOUSE TECHNICAL LINE
+========================================================= */
 
-        this.style.display = "block";
+const cursorLine =
+document.querySelector('.cursor-line');
 
-        photoFallback.style.display = "none";
+document.addEventListener(
+'mousemove',
+(e)=>{
 
-    });
+cursorLine.style.left =
+e.clientX + 'px';
+
+}
+);
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+document.querySelectorAll('section[id]');
+
+const navLinks =
+document.querySelectorAll('.nav-links a');
+
+window.addEventListener(
+'scroll',
+()=>{
+
+let current = '';
+
+sections.forEach(section=>{
+
+const sectionTop =
+section.offsetTop - 180;
+
+if(
+window.scrollY >= sectionTop
+){
+
+current =
+section.getAttribute('id');
+
+}
+
+});
+
+
+navLinks.forEach(link=>{
+
+link.style.color = '';
+
+if(
+link.getAttribute('href') ===
+'#' + current
+){
+
+link.style.color =
+'#d7ad5a';
+
+}
+
+});
+
+}
+);
+
+
+/* =========================================================
+   DOCUMENT REVISION EFFECT
+========================================================= */
+
+const revisionText =
+document.querySelector('.doc-top span:nth-child(2)');
+
+let revisions =
+['REV: 00','REV: 01','REV: 02','CURRENT'];
+
+let revisionIndex = 0;
+
+setInterval(()=>{
+
+revisionIndex++;
+
+if(
+revisionIndex >= revisions.length
+){
+revisionIndex = 0;
+}
+
+if(revisionText){
+
+revisionText.style.opacity='0';
+
+setTimeout(()=>{
+
+revisionText.textContent =
+revisions[revisionIndex];
+
+revisionText.style.opacity='1';
+
+},250);
+
+}
+
+},2200);
+
+
+/* =========================================================
+   SMOOTH BUTTON FEEDBACK
+========================================================= */
+
+document.querySelectorAll('a[href^="#"]')
+.forEach(link=>{
+
+link.addEventListener(
+'click',
+function(){
+
+const target =
+document.querySelector(
+this.getAttribute('href')
+);
+
+if(target){
+
+target.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+});
+
+});
 
 </script>
-
-
-<!-- =========================================================
-     SIMPLE SCROLL REVEAL
-========================================================= -->
-
-<script>
-
-    const revealElements =
-        document.querySelectorAll(
-            ".glass-card, .expertise-card, .project, .credential, .contact-card, .timeline-item"
-        );
-
-
-    const observer =
-        new IntersectionObserver(
-
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.style.opacity = "1";
-
-                        entry.target.style.transform =
-                            "translateY(0)";
-
-                        entry.target.style.transition =
-                            "opacity 0.8s ease, transform 0.8s ease";
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.12
-            }
-
-        );
-
-
-    revealElements.forEach(element => {
-
-        element.style.opacity = "0";
-
-        element.style.transform =
-            "translateY(25px)";
-
-        observer.observe(element);
-
-    });
-
-</script>
-
 
 </body>
 </html>
